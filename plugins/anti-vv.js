@@ -1,6 +1,6 @@
-const { marwld } = require("../marwld");
+const { lite } = require("../marwld");
 
-marwld({
+lite({
   pattern: "vv",
   alias: ["viewonce", 'retrive'],
   react: '🐳',
