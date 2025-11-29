@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
 const config = require('../config');
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 
-marwld({
+lite({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch information about this GitHub repository.",
