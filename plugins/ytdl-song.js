@@ -29,7 +29,7 @@ marwld({
             `📀 *Quality:* ${res.quality}\n` +
             `⏳ *Duration:* ${res.duration} sec\n` +
             `🖇 *Video URL:* ${res.videoUrl}\n\n` +
-            `${config.FOOTER || "ʟɪᴛᴇ-xᴅ"}`;
+            `${config.FOOTER || "𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
 
         // Send Thumbnail + caption
         await conn.sendMessage(from, {
