@@ -1,9 +1,9 @@
-const { marwld ,commands } = require('../marwld');
+const { lite ,commands } = require('../marwld');
 const { exec } = require('child_process');
 const config = require('../config');
 const {sleep} = require('../lib/functions')
 // 1. Shutdown Bot
-marwld({
+lite({
     pattern: "shutdown",
     desc: "Shutdown the bot.",
     category: "owner",
@@ -15,7 +15,7 @@ async (conn, mek, m, { from, isOwner, reply }) => {
     reply("🛑 Shutting down...").then(() => process.exit());
 });
 // 2. Broadcast Message to All Groups
-marwld({
+lite({
     pattern: "broadcast",
     desc: "Broadcast a message to all groups.",
     category: "owner",
@@ -33,7 +33,7 @@ async (conn, mek, m, { from, isOwner, args, reply }) => {
     reply("📢 Message broadcasted to all groups.");
 });
 // 3. Set Profile Picture
-marwld({
+lite({
     pattern: "setpp",
     desc: "Set bot profile picture.",
     category: "owner",
@@ -53,7 +53,7 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 });
 
 // 6. Clear All Chats
-marwld({
+lite({
     pattern: "clearchats",
     desc: "Clear all chats from the bot.",
     category: "owner",
@@ -74,7 +74,7 @@ async (conn, mek, m, { from, isOwner, reply }) => {
 });
 
 // 8. Group JIDs List
-marwld({
+lite({
     pattern: "gjid",
     desc: "Get the list of JIDs for all groups the bot is part of.",
     category: "owner",
@@ -91,7 +91,7 @@ async (conn, mek, m, { from, isOwner, reply }) => {
 
 // delete 
 
-marwld({
+lite({
 pattern: "delete",
 react: "❌",
 alias: ["del"],
