@@ -2,10 +2,10 @@
 
 const fs = require('fs');
 const config = require('../config');
-const { marwld, commands } = require('../marwld');
+const { lite, commands } = require('../marwld');
 const axios = require('axios');
 
-marwld({
+lite({
     pattern: "menu",
     react: "🤖",
     alias: ["allmenu"],
