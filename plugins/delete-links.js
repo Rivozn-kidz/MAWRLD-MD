@@ -1,4 +1,4 @@
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 const config = require('../config');
 const fs = require('fs');
 const path = require('path');
@@ -25,7 +25,7 @@ const linkPatterns = [
   /https?:\/\/(?:www\.)?discord\.com\/\S+/gi
 ];
 
-marwld({
+lite({
   on: 'body'
 }, async (conn, m, store, {
   from,
