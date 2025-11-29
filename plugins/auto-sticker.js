@@ -2,9 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../config');
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 
-marwld({
+lite({
   on: "body"
 },
 async (conn, mek, m, { from, body }) => {
