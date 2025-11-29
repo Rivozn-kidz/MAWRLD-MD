@@ -1,5 +1,5 @@
 const config = require('../config');
-const { lite, commands } = require('../mawrld');
+const { lite, commands } = require('../marwld');
 
 config({
     pattern: "ping",
