@@ -1,7 +1,7 @@
-const config = require('../settings');
-const { lite, commands } = require('../lite');
+const config = require('../config');
+const { lite, commands } = require('../mawrld');
 
-lite({
+config({
     pattern: "ping",
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
@@ -53,6 +53,4 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         reply(`An error occurred: ${e.message}`);
     }
 });
-
-// created by malvin king
 
