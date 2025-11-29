@@ -1,5 +1,5 @@
 const fs = require('fs');
-const config = require('../settings')
+const config = require('../config')
 const { marwld, commands } = require('../marwld')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 
