@@ -19,59 +19,55 @@ async (conn, mek, m, {
     try {
         let menu = {
             download: '', group: '', fun: '', owner: '',
-            ai: '', anime: '', convert: '', reaction: '',
+            ai: '', convert: '', reaction: '',
             main: '', other: ''
         };
 
         for (let i = 0; i < commands.length; i++) {
             let cmd = commands[i];
             if (cmd.pattern && !cmd.dontAddCommandList && menu.hasOwnProperty(cmd.category)) {
-                menu[cmd.category] += `│ ⬡ ${cmd.pattern}\n`;
+                menu[cmd.category] += `┃  ⬡➤${cmd.pattern}`;
             }
         }
 
         let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU*
-│ 👤 User: ${pushname}
-│ 🌐 Mode: [${config.MODE}]
-│ ✨ Prefix: [${config.PREFIX}]
-│ 📦 Total Commands: ${commands.length}
-│ 📌 Version: ${config.VERSION} BETA
-╰─────────────✦
+│ ⬡➤👤 User: ${pushname}
+│ ⬡➤ 🌐 Mode: [${config.MODE}]
+│ ⬡➤ ✨ Prefix: [${config.PREFIX}]
+│ ⬡➤ 📦 Total Commands: ${commands.length}
+│ ⬡➤ 📌 Version: ${config.VERSION} BETA
+╰─────────────────────━━╯
 
 ┌───『 🛠️ Admin Commands 』
 ${menu.group || '│ (No commands found)'}
 ${menu.main || ''}
 ${menu.other || ''}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 📥 Downloader Commands 』
 ${menu.download || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 🧑‍💻 Owner Commands 』
 ${menu.owner || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 🧠 AI Commands 』
 ${menu.ai || '│ (No commands found)'}
-└─────────────✦
-
-┌───『 ✨ Logo/Anime Commands 』
-${menu.anime || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 🔄 Convert Commands 』
 ${menu.convert || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 🎭 Reaction Commands 』
 ${menu.reaction || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 ┌───『 🎉 Fun Commands 』
 ${menu.fun || '│ (No commands found)'}
-└─────────────✦
+└──────────────────────━━╯
 
 > ${config.DESCRIPTION}
 `;
