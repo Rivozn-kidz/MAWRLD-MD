@@ -1,9 +1,9 @@
 const axios = require('axios');
 const config = require('../config')
-const {marwld , commands} = require('../marwld')
+const {lite , commands} = require('../marwld')
 const googleTTS = require('google-tts-api')
 
-marwld({
+lite({
     pattern: "tts",
     desc: "download songs",
     category: "download",
