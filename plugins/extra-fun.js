@@ -1,7 +1,7 @@
-const { marwld } = require("../marwld");
+const { lite } = require("../marwld");
 const config = require('../config');
 
-marwld({
+lite({
   pattern: "compatibility",
   alias: ["friend", "fcheck"],
   desc: "Calculate the compatibility score between two users.",
@@ -41,7 +41,7 @@ marwld({
   }
 });
 
-  marwld({
+  lite({
   pattern: "aura",
   desc: "Calculate aura score of a user.",
   category: "fun",
@@ -78,7 +78,7 @@ marwld({
   }
 });
 
-marwld({
+lite({
     pattern: "roast",
     desc: "Roast someone ",
     category: "fun",
@@ -173,7 +173,7 @@ marwld({
     await conn.sendMessage(mek.chat, { text: message, mentions: [mek.sender, mentionedUser] }, { quoted: mek });
 });
 
-marwld({
+lite({
     pattern: "8ball",
     desc: "Magic 8-Ball gives answers",
     category: "fun",
@@ -194,7 +194,7 @@ async (conn, mek, m, { from, q, reply }) => {
     reply(`🎱 *Magic 8-Ball says:* ${answer}`);
 });
 
-marwld({
+lite({
     pattern: "compliment",
     desc: "Give a nice compliment",
     category: "fun",
@@ -237,7 +237,7 @@ marwld({
     await conn.sendMessage(mek.chat, { text: message, mentions: [mek.sender, mentionedUser].filter(Boolean) }, { quoted: mek });
 });
 
-marwld({
+lite({
     pattern: "lovetest",
     desc: "Check love compatibility between two users",
     category: "fun",
@@ -268,7 +268,7 @@ marwld({
     await conn.sendMessage(mek.chat, { text: message, mentions: [user1, user2] }, { quoted: mek });
 }); 
 
-marwld(
+lite(
     {
         pattern: "emoji",
         desc: "Convert text into emoji form.",
