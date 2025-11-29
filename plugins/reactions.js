@@ -1,8 +1,7 @@
-const { marwld } = require("../marwld");
+const { lite } = require("../marwld");
 const { fetchGif, gifToVideo } = require("../lib/fetchGif");
 const axios = require("axios");
-
-marwld(
+lite(
     {
         pattern: "cry",
         desc: "Send a crying reaction GIF.",
@@ -42,7 +41,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "cuddle",
         desc: "Send a cuddle reaction GIF.",
@@ -82,7 +81,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "bully",
         desc: "Send a bully reaction GIF.",
@@ -122,7 +121,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "hug",
         desc: "Send a hug reaction GIF.",
@@ -163,7 +162,7 @@ marwld(
 );
 
 
-marwld(
+lite(
     {
         pattern: "awoo",
         desc: "Send an awoo reaction GIF.",
@@ -203,7 +202,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "lick",
         desc: "Send a lick reaction GIF.",
@@ -238,7 +237,7 @@ marwld(
     }
 );
   
-marwld(
+lite(
     {
         pattern: "pat",
         desc: "Send a pat reaction GIF.",
@@ -278,7 +277,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "smug",
         desc: "Send a smug reaction GIF.",
@@ -318,7 +317,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "bonk",
         desc: "Send a bonk reaction GIF.",
@@ -359,7 +358,7 @@ marwld(
 );
 
 
-marwld(
+lite(
     {
         pattern: "yeet",
         desc: "Send a yeet reaction GIF.",
@@ -399,7 +398,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "blush",
         desc: "Send a blush reaction GIF.",
@@ -439,7 +438,7 @@ marwld(
     }
 );  
   
-marwld(
+lite(
     {
         pattern: "handhold",
         desc: "Send a hand-holding reaction GIF.",
@@ -480,7 +479,7 @@ marwld(
 );
 
 
-marwld(
+lite(
     {
         pattern: "highfive",
         desc: "Send a high-five reaction GIF.",
@@ -519,8 +518,7 @@ marwld(
         }
     }
 );  
-
-marwld(
+lite(
     {
         pattern: "nom",
         desc: "Send a nom reaction GIF.",
@@ -560,7 +558,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "wave",
         desc: "Send a wave reaction GIF.",
@@ -600,7 +598,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "smile",
         desc: "Send a smile reaction GIF.",
@@ -640,7 +638,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "wink",
         desc: "Send a wink reaction GIF.",
@@ -680,7 +678,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "happy",
         desc: "Send a happy reaction GIF.",
@@ -720,7 +718,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "glomp",
         desc: "Send a glomp reaction GIF.",
@@ -760,7 +758,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "bite",
         desc: "Send a bite reaction GIF.",
@@ -800,7 +798,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "poke",
         desc: "Send a poke reaction GIF.",
@@ -841,7 +839,7 @@ marwld(
 );
   
   
-marwld(
+lite(
     {
         pattern: "cringe",
         desc: "Send a cringe reaction GIF.",
@@ -882,7 +880,7 @@ marwld(
 );
 
 
-marwld(
+lite(
     {
         pattern: "dance",
         desc: "Send a dance reaction GIF.",
@@ -924,7 +922,7 @@ marwld(
 
 
   
-marwld(
+lite(
     {
         pattern: "kill",
         desc: "Send a kill reaction GIF.",
@@ -968,7 +966,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "slap",
         desc: "Send a slap reaction GIF.",
@@ -1012,7 +1010,7 @@ marwld(
     }
 );
 
-marwld(
+lite(
     {
         pattern: "kiss",
         desc: "Send a kiss reaction GIF.",
