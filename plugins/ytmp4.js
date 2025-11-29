@@ -1,8 +1,8 @@
 const axios = require('axios');
 const config = require('../config');
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 
-marwld({
+lite({
     pattern: "ytvideo",
     alias: ["ytv", "video"],
     react: "📹",
