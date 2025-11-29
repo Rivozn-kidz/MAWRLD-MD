@@ -1,7 +1,7 @@
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 const { getAnti, setAnti } = require('../data/antidel');
 
-marwld({
+lite({
     pattern: "antidelete",
     alias: ['antidel', 'del'],
     desc: "Toggle anti-delete feature",
