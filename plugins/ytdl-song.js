@@ -1,8 +1,8 @@
 const axios = require('axios');
 const config = require('../config');
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 
-marwld({
+lite({
     pattern: "song",
     alias: ["s", "play"],
     react: "🎵",
