@@ -1,8 +1,8 @@
 const axios = require('axios');
-const config = require('../settings');
-const { lite } = require('../lite');
+const config = require('../config');
+const { marwld } = require('../marwld');
 
-lite({
+marwld({
     pattern: "ytvideo",
     alias: ["ytv", "video"],
     react: "📹",
@@ -29,7 +29,7 @@ lite({
             `📀 *Quality:* ${res.quality}\n` +
             `⏳ *Duration:* ${res.duration} sec\n` +
             `🖇 *Video URL:* ${res.videoUrl}\n\n` +
-            `${config.FOOTER || "ʟɪᴛᴇ-xᴅ"}`;
+            `${config.FOOTER || "𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
 
         // Send Thumbnail Preview
         await conn.sendMessage(from, {
