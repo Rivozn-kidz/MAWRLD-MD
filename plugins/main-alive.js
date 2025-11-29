@@ -1,9 +1,9 @@
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 const os = require('os');
 const { runtime } = require('../lib/functions');
 const config = require('../config');
 
-marwld({
+lite({
     pattern: "alive",
     alias: ["status", "online", "a"],
     desc: "Check if bot is alive and running",
