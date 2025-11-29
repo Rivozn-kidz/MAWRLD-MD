@@ -1,4 +1,4 @@
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 const config = require("../config");
 
 // Configurable lists
@@ -16,7 +16,7 @@ const linkPatterns = [
   /https?:\/\/ngl\/\S+/gi
 ];
 
-marwld({
+lite({
   on: "body"
 }, async (conn, m, store, { from, body, sender, isGroup, isAdmins, isBotAdmins, reply }) => {
   try {
