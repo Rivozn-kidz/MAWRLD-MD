@@ -1,7 +1,7 @@
 const config = require('../config');
 const { lite, commands } = require('../marwld');
 
-config({
+lite({
     pattern: "ping",
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
