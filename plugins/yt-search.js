@@ -1,12 +1,12 @@
 const config = require('../config')
 const l = console.log
-const { marwld, commands } = require('../marwld')
+const { lite, commands } = require('../marwld')
 const dl = require('@bochilteam/scraper')  
 const ytdl = require('yt-search');
 const fs = require('fs-extra')
 var videotime = 60000 // 1000 min
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
-marwld({
+lite({
     pattern: "yts",
     alias: ["ytsearch"],
     use: '.yts mawrld md',
