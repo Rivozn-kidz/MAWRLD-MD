@@ -26,7 +26,7 @@ async (conn, mek, m, {
         for (let i = 0; i < commands.length; i++) {
             let cmd = commands[i];
             if (cmd.pattern && !cmd.dontAddCommandList && menu.hasOwnProperty(cmd.category)) {
-                menu[cmd.category] += `┃  ⬡➤${cmd.pattern}`;
+                menu[cmd.category] += `┃  ⬡➤${cmd.pattern}\n`;
             }
         }
 
