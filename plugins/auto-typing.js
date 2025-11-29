@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../config')
-const {marwld , commands} = require('../marwld')
+const {lite , commands} = require('../marwld')
 
 
 // Composing (Auto Typing)
-marwld({
+lite({
     on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
