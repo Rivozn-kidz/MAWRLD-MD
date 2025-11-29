@@ -1,7 +1,7 @@
-const { marwld } = require("../marwld");  
+const { lite } = require("../marwld");  
 const { sleep } = require("../lib/functions");  
 
-marwld({  
+lite({  
     pattern: "restart",  
     desc: "Restart marwld xd",  
     category: "owner",  
