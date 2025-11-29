@@ -1,8 +1,8 @@
 const converter = require('../data/converter');
 const stickerConverter = require('../data/sticker-converter');
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 
-marwld({
+lite({
     pattern: 'convert',
     alias: ['sticker2img', 'stoimg', 'stickertoimage', 's2i'],
     desc: 'Convert stickers to images',
@@ -47,7 +47,7 @@ marwld({
     }
 });
 
-marwld({
+lite({
     pattern: 'tomp3',
     desc: 'Convert media to audio',
     category: 'convert',
@@ -97,7 +97,7 @@ marwld({
     }
 });
 
-marwld({
+lite({
     pattern: 'toptt',
     desc: 'Convert media to voice message',
     category: 'convert',
