@@ -1,7 +1,7 @@
-const { marwld } = require('../marwld');
+const { lite } = require('../marwld');
 const config = require('../config');
 
-marwld({
+lite({
     pattern: "owner",
     react: "✅", 
     desc: "Get owner number",
