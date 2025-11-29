@@ -1,13 +1,13 @@
 const fs = require('fs');
 const config = require('../config')
-const { marwld, commands } = require('../marwld')
+const { lite, commands } = require('../marwld')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 
 
 
 //vcf//
 
-marwld({
+lite({
     pattern: 'savecontact',
     alias: ["vcf","scontact","savecontacts"],
     desc: 'gc vcard',
