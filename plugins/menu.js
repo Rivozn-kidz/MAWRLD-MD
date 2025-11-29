@@ -36,7 +36,7 @@ async (conn, mek, m, {
 │ 🌐 Mode: [${config.MODE}]
 │ ✨ Prefix: [${config.PREFIX}]
 │ 📦 Total Commands: ${commands.length}
-│ 📌 Version: ${config.version} BETA
+│ 📌 Version: ${config.VERSION} BETA
 ╰─────────────✦
 
 ┌───『 🛠️ Admin Commands 』
