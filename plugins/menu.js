@@ -113,6 +113,26 @@ lite(
  ├─∘❏ bite
  ╰─────────────────────❏
 
+ 
+ ╭──『 *GROUP MANAGEMENT* 』──❏
+ ├─∘❏ unlockgc 
+ ├─∘❏ unmute 
+ ├─∘❏ tagall 
+ ├─∘❏ out
+ ├─∘❏ mute
+ ├─∘❏ lockgc
+ ├─∘❏ invite 
+ ├─∘❏ leave 
+ ├─∘❏ kickball
+ ├─∘❏ join 
+ ├─∘❏ ginfo
+ ├─∘❏ updategname
+ ├─∘❏ updategdesc
+ ├─∘❏ rejectall
+ ├─∘❏ acceptall
+ ├─∘❏ requestlist
+ ├─∘❏ takeadmin
+ ╰─────────────────────❏
 > ${config.DESCRIPTION}
 `;
 
