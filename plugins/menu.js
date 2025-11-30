@@ -1,24 +1,22 @@
-
-
 const fs = require('fs');
 const config = require('../config');
 const { lite, commands } = require('../marwld');
 const axios = require('axios');
 
-lite({
+lite(
+  {
     pattern: "menu",
     react: "🔮",
     alias: ["allmenu"],
     desc: "Get command list",
     category: "main",
     filename: __filename
-},
-async (conn, mek, m, {
-    from, quoted, pushname, reply
-}) => {
-   
+  },
 
-        let madeMenu = `
+  async (conn, mek, m, { from, quoted, pushname, reply }) => {
+    try {
+
+      let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU*
 │ ⬡➤👤 User: ${pushname}
 │ ⬡➤ 🌐 Mode: [${config.MODE}]
@@ -37,8 +35,7 @@ async (conn, mek, m, {
  ├─∘❏ owner 
  ╰─────────────────────❏
  
- ╭───『 *AI & CONVERTER MENU* 』──────❏
- ├─∘❏ 
+╭───『 *AI & CONVERTER MENU* 』──────❏
  ├─∘❏ openai
  ├─∘❏ deepseek
  ├─∘❏ ai
@@ -48,9 +45,7 @@ async (conn, mek, m, {
  ├─∘❏ tts
  ╰─────────────────────❏
  
- 
- ╭───『 *FUN & PERSONALITY MENU* 』─────❏
- ├─∘❏ 
+╭───『 *FUN & PERSONALITY MENU* 』─────❏
  ├─∘❏ 8ball
  ├─∘❏ compliment
  ├─∘❏ lovetest
@@ -61,9 +56,7 @@ async (conn, mek, m, {
  ├─∘❏ emoji
  ╰─────────────────────❏
  
-
- ╭───『 *SOCIAL MEDIA MENU* 』──────❏
- ├─∘❏ 
+╭───『 *SOCIAL MEDIA MENU* 』──────❏
  ├─∘❏ facebook
  ├─∘❏ facebook2
  ├─∘❏ instagram 
@@ -80,8 +73,7 @@ async (conn, mek, m, {
  ├─∘❏ video 
  ╰─────────────────────❏
 
- ╭───『 *OWNER MENU*  』───────❏
- ├─∘❏ 
+╭───『 *OWNER MENU* 』───────❏
  ├─∘❏ delete
  ├─∘❏ vcf
  ├─∘❏ antidelete
@@ -92,8 +84,7 @@ async (conn, mek, m, {
  ├─∘❏ gjid
  ╰─────────────────────❏
  
- ╭───『 *TOOLS AND UTILITIES MENU* 』──────❏
- ├─∘❏ 
+╭───『 *TOOLS AND UTILITIES MENU* 』──────❏
  ├─∘❏ cringe 
  ├─∘❏ poke 
  ├─∘❏ dance 
@@ -122,37 +113,41 @@ async (conn, mek, m, {
  ├─∘❏ bite
  ╰─────────────────────❏
 
-
 > ${config.DESCRIPTION}
 `;
 
-        await conn.sendMessage(
-            from,
-            {
-                image: { url: config.MENU_IMAGE_URL },
-                caption: madeMenu,
-                contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363404529319592@newsletter',
-                        newsletterName: 'Ridz Tech Inc',
-                        serverMessageId: 143
-                    }
-                }
-            },
-            { quoted: mek }
-        );
+      await conn.sendMessage(
+        from,
+        {
+          image: { url: config.MENU_IMAGE_URL },
+          caption: madeMenu,
+          contextInfo: {
+            mentionedJid: [m.sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+              newsletterJid: '120363404529319592@newsletter',
+              newsletterName: 'Ridz Tech Inc',
+              serverMessageId: 143
+            }
+          }
+        },
+        { quoted: mek }
+      );
 
-        await conn.sendMessage(from, {
-            audio: fs.readFileSync('./all/menu.m4a'),
-            mimetype: 'audio/mp4',
-            ptt: true
-        }, { quoted: mek });
+      await conn.sendMessage(
+        from,
+        {
+          audio: fs.readFileSync('./all/menu.m4a'),
+          mimetype: 'audio/mp4',
+          ptt: true
+        },
+        { quoted: mek }
+      );
 
     } catch (e) {
-        console.error(e);
-        reply(`${e}`);
+      console.error(e);
+      reply(`${e}`);
     }
-});
+  }
+);
