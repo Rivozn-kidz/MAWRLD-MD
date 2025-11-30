@@ -3,10 +3,10 @@ const config = require('../config');
 const { lite } = require('../marwld');
 
 lite({
-    pattern: "song",
-    alias: ["s", "play"],
+    pattern: "play",
+    alias: ["s", "song"],
     react: "🎵",
-    desc: "Download MP3 using PrivateZia API",
+    desc: "Download MP3 from YouTube",
     category: "download",
     use: ".song <Text or YT URL>",
     filename: __filename
