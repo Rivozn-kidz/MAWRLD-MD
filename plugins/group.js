@@ -14,7 +14,7 @@ const {
   runtime,
   sleep,
   fetchJson
-} = require('../lib/functions');
+} = require('../lib/functions3');
 
 const prefix = config.PREFIX;
 lite({
