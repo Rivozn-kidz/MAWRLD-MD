@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const config = require('../config');
-const { cmd, commands } = require('../command');
+const { lite, commands } = require('../marwld');
 
 const {
   getBuffer,
