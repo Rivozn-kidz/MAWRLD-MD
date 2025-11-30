@@ -25,7 +25,7 @@ lite(
 │ ⬡➤ 📌 Version: ${config.VERSION} BETA
 ╰─────────────────────━━╯
 
-╭───『 *SYSTEM/CORE MENU* 』──────❏
+ ╭──『 *SYSTEM/CORE MENU* 』──❏
  ├─∘❏ menu
  ├─∘❏ vv
  ├─∘❏ ping
@@ -35,7 +35,7 @@ lite(
  ├─∘❏ owner 
  ╰─────────────────────❏
  
-╭───『 *AI & CONVERTER MENU* 』──────❏
+ ╭─『 *AI & CONVERTER MENU* 』 ──❏
  ├─∘❏ openai
  ├─∘❏ deepseek
  ├─∘❏ ai
@@ -45,7 +45,7 @@ lite(
  ├─∘❏ tts
  ╰─────────────────────❏
  
-╭───『 *FUN & PERSONALITY MENU* 』─────❏
+ ╭─『 *FUN & PERSONALITY MENU* 』─❏
  ├─∘❏ 8ball
  ├─∘❏ compliment
  ├─∘❏ lovetest
@@ -56,7 +56,7 @@ lite(
  ├─∘❏ emoji
  ╰─────────────────────❏
  
-╭───『 *SOCIAL MEDIA MENU* 』──────❏
+ ╭─『 *SOCIAL MEDIA MENU* 』─❏
  ├─∘❏ facebook
  ├─∘❏ facebook2
  ├─∘❏ instagram 
@@ -73,7 +73,7 @@ lite(
  ├─∘❏ video 
  ╰─────────────────────❏
 
-╭───『 *OWNER MENU* 』───────❏
+ ╭─『 *OWNER MENU* 』───❏
  ├─∘❏ delete
  ├─∘❏ vcf
  ├─∘❏ antidelete
@@ -84,7 +84,7 @@ lite(
  ├─∘❏ gjid
  ╰─────────────────────❏
  
-╭───『 *TOOLS AND UTILITIES MENU* 』──────❏
+ ╭─『 *TOOLS AND UTILITIES MENU* 』──❏
  ├─∘❏ cringe 
  ├─∘❏ poke 
  ├─∘❏ dance 
