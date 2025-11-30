@@ -17,12 +17,15 @@ lite(
     try {
 
       let madeMenu = `
-╭─❍ *${config.BOT_NAME} MENU*
-│ ⬡➤👤 User: ${pushname}
-│ ⬡➤ 🌐 Mode: [${config.MODE}]
-│ ⬡➤ ✨ Prefix: [${config.PREFIX}]
-│ ⬡➤ 📦 Total Commands: ${commands.length}
-│ ⬡➤ 📌 Version: ${config.VERSION} BETA
+╭─❍ *${config.BOT_NAME} MENU* ⬡────⭓
+├▢⬡ 👤 User: ${pushname}
+├▢⬡ 🌐 Mode: [${config.MODE}]
+├▢⬡ ✨ Prefix: [${config.PREFIX}]
+├▢⬡ 📦 Total Commands: ${commands.length}
+├▢⬡ 📌 Version: ${config.VERSION} BETA
+├▢⬡ ☁️ Platform:* Heroku
+├▢⬡ 📡 Baileys:* Multi Device
+├▢⬡ 🤖 Owner:* ${config.OWNER_NAME}
 ╰─────────────────────━━╯
 
  ╭──『 *SYSTEM/CORE MENU* 』──❏
