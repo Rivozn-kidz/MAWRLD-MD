@@ -7,7 +7,7 @@ const axios = require('axios');
 
 lite({
     pattern: "menu",
-    react: "🤖",
+    react: "🔮",
     alias: ["allmenu"],
     desc: "Get command list",
     category: "main",
@@ -16,19 +16,7 @@ lite({
 async (conn, mek, m, {
     from, quoted, pushname, reply
 }) => {
-    try {
-        let menu = {
-            download: '', group: '', fun: '', owner: '',
-            ai: '', convert: '', reaction: '',
-            main: '', other: ''
-        };
-
-        for (let i = 0; i < commands.length; i++) {
-            let cmd = commands[i];
-            if (cmd.pattern && !cmd.dontAddCommandList && menu.hasOwnProperty(cmd.category)) {
-                menu[cmd.category] += `┃  ⬡➤${cmd.pattern}\n`;
-            }
-        }
+   
 
         let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU*
@@ -39,35 +27,101 @@ async (conn, mek, m, {
 │ ⬡➤ 📌 Version: ${config.VERSION} BETA
 ╰─────────────────────━━╯
 
-┌───『 🛠️ Admin Commands 』
-${menu.group || '│ (No commands found)'}
-${menu.main || ''}
-${menu.other || ''}
-└──────────────────────━━╯
+╭───『 *SYSTEM/CORE MENU* 』──────❏
+ ├─∘❏ menu
+ ├─∘❏ vv
+ ├─∘❏ ping
+ ├─∘❏ alive
+ ├─∘❏ repo
+ ├─∘❏ restart
+ ├─∘❏ owner 
+ ╰─────────────────────❏
+ 
+ ╭───『 *AI & CONVERTER MENU* 』──────❏
+ ├─∘❏ 
+ ├─∘❏ openai
+ ├─∘❏ deepseek
+ ├─∘❏ ai
+ ├─∘❏ toppt 
+ ├─∘❏ tomp3
+ ├─∘❏ convert 
+ ├─∘❏ tts
+ ╰─────────────────────❏
+ 
+ 
+ ╭───『 *FUN & PERSONALITY MENU* 』─────❏
+ ├─∘❏ 
+ ├─∘❏ 8ball
+ ├─∘❏ compliment
+ ├─∘❏ lovetest
+ ├─∘❏ emoji
+ ├─∘❏ compatibility
+ ├─∘❏ aura
+ ├─∘❏ roast
+ ├─∘❏ emoji
+ ╰─────────────────────❏
+ 
 
-┌───『 📥 Downloader Commands 』
-${menu.download || '│ (No commands found)'}
-└──────────────────────━━╯
+ ╭───『 *SOCIAL MEDIA MENU* 』──────❏
+ ├─∘❏ 
+ ├─∘❏ facebook
+ ├─∘❏ facebook2
+ ├─∘❏ instagram 
+ ├─∘❏ instagram2
+ ├─∘❏ instagram3
+ ├─∘❏ instagram4
+ ├─∘❏ gitclone 
+ ├─∘❏ tiktok 
+ ├─∘❏ tiktok2 
+ ├─∘❏ tiktok3 
+ ├─∘❏ tiktoksearch
+ ├─∘❏ play
+ ├─∘❏ yts
+ ├─∘❏ video 
+ ╰─────────────────────❏
 
-┌───『 🧑‍💻 Owner Commands 』
-${menu.owner || '│ (No commands found)'}
-└──────────────────────━━╯
+ ╭───『 *OWNER MENU*  』───────❏
+ ├─∘❏ 
+ ├─∘❏ delete
+ ├─∘❏ vcf
+ ├─∘❏ antidelete
+ ├─∘❏ shutdown
+ ├─∘❏ broadcast 
+ ├─∘❏ setpp
+ ├─∘❏ clearchats
+ ├─∘❏ gjid
+ ╰─────────────────────❏
+ 
+ ╭───『 *TOOLS AND UTILITIES MENU* 』──────❏
+ ├─∘❏ 
+ ├─∘❏ cringe 
+ ├─∘❏ poke 
+ ├─∘❏ dance 
+ ├─∘❏ kill
+ ├─∘❏ slap 
+ ├─∘❏ kiss 
+ ├─∘❏ glomp
+ ├─∘❏ happy
+ ├─∘❏ wink
+ ├─∘❏ smile
+ ├─∘❏ wave
+ ├─∘❏ nom
+ ├─∘❏ highfive 
+ ├─∘❏ handhold 
+ ├─∘❏ blush
+ ├─∘❏ bonk
+ ├─∘❏ yeet
+ ├─∘❏ smug
+ ├─∘❏ pat
+ ├─∘❏ lick
+ ├─∘❏ awoo
+ ├─∘❏ hug
+ ├─∘❏ bully
+ ├─∘❏ cuddle 
+ ├─∘❏ cry
+ ├─∘❏ bite
+ ╰─────────────────────❏
 
-┌───『 🧠 AI Commands 』
-${menu.ai || '│ (No commands found)'}
-└──────────────────────━━╯
-
-┌───『 🔄 Convert Commands 』
-${menu.convert || '│ (No commands found)'}
-└──────────────────────━━╯
-
-┌───『 🎭 Reaction Commands 』
-${menu.reaction || '│ (No commands found)'}
-└──────────────────────━━╯
-
-┌───『 🎉 Fun Commands 』
-${menu.fun || '│ (No commands found)'}
-└──────────────────────━━╯
 
 > ${config.DESCRIPTION}
 `;
