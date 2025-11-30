@@ -55,7 +55,7 @@ lite({
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363354023106228@newsletter',
+          newsletterJid: '120363404529319592@newsletter',
           newsletterName: 'Ridz Tech Inc',
           serverMessageId: 143
         }
