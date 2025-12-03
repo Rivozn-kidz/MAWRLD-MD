@@ -285,7 +285,7 @@ lite({
 
     await conn.sendMessage(m.chat, {
       image: imageBuffer,
-      caption: `> *Powered by JawadTechX*`
+      caption: `> *Powered by Ridz Coder*`
     });
 
   } catch (error) {
