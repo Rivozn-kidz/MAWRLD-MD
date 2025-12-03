@@ -265,15 +265,16 @@ lite(
         { quoted: mek }
       );
 
-      await conn.sendMessage(
-        from,
-        {
-          audio: fs.readFileSync('./all/menu.m4a'),
-          mimetype: 'audio/mp4',
-          ptt: true
-        },
-        { quoted: mek }
-      );
+
+await conn.sendMessage(
+  from,
+  {
+    audio: (await axios.get("https://files.catbox.moe/cd2wvm.m4a", { responseType: "arraybuffer" })).data,
+    mimetype: "audio/mp4",
+    ptt: true
+  },
+  { quoted: mek }
+);
 
     } catch (e) {
       console.error(e);
