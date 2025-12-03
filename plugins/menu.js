@@ -268,7 +268,7 @@ lite(
 await conn.sendMessage(
   from,
   {
-    audio: (await axios.get("https://files.catbox.moe/cd2wvm.m4a", { responseType: "arraybuffer" })).data,
+    audio: (await axios.get("https://files.catbox.moe/s93vg8.mp3", { responseType: "arraybuffer" })).data,
     mimetype: "audio/mp4",
     ptt: true
   },
