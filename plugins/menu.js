@@ -21,12 +21,11 @@ lite(
 ╭─❍ *${config.BOT_NAME} MENU* ⬡────⭓
 ├▢⬡ 🤖 *Owner:* ${config.OWNER_NAME}
 ├▢⬡ 👤 *User:* ${pushname}
-├▢⬡ ⏱️ Runtime:* ${runtime(process.uptime())}
+├▢⬡ ⏱️ *Runtime:* ${runtime(process.uptime())}
 ├▢⬡ 🌐 *Mode:* [${config.MODE}]
 ├▢⬡ ✨ *Prefix:* [${config.PREFIX}]
 ├▢⬡ 📦 *Total Commands:* ${commands.length}
 ├▢⬡ 📌 *Version:* ${config.VERSION} BETA
-├▢⬡ 📡 *Baileys:* Multi Device
 ╰─────────────────────━━╯
 
  ╭──『 *SYSTEM/CORE MENU* 』──❏
