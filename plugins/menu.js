@@ -72,6 +72,8 @@ lite(
  ├─∘❏ tiktok3 
  ├─∘❏ tiktoksearch
  ├─∘❏ play
+ ├─∘❏ play2
+ ├─∘❏ playx
  ├─∘❏ yts
  ├─∘❏ video 
  ╰─────────────────────❏
