@@ -12,39 +12,39 @@ lite({
     filename: __filename
 }, async (conn, m, mek, { from, q, reply }) => {
     try {
-        if (!q) return reply("❌ Please provide a query or YouTube URL!");
+        if (!q) return await reply("❌ Please provide a query or YouTube URL!");
 
         const apiUrl = `https://api.privatezia.biz.id/api/downloader/ytplaymp3?query=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
 
         if (!data?.result) {
-            return reply("❌ Failed to get data from API.");
+            return await reply("❌ Failed to get data from API.");
         }
 
         const res = data.result;
 
-           const caption = 
+        const caption = 
 `╭─❍  *MAWRLD MD SONG DL*  ⬡────⭓
 ├▢⬡ 
-├▢⬡ ✨ *Title:* ${title}
-├▢⬡ 📀 *Quality:* ${quality}
-├▢⬡ ⏳ *Duration:* ${duration} sec
-├▢⬡ 🖇 *Video URL:* ${videoUrl}
+├▢⬡ ✨ *Title:* ${res.title}
+├▢⬡ 📀 *Quality:* ${res.quality || "Unknown"}
+├▢⬡ ⏳ *Duration:* ${res.duration || "Unknown"} sec
+├▢⬡ 🖇 *Video URL:* ${res.videoUrl || q}
 ├▢⬡ 
 ╰─────────────────────━━╯
 ${config.FOOTER || "𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
 
-        // Send Thumbnail + caption
+        // Send thumbnail + caption
         await conn.sendMessage(from, {
             image: { url: res.thumbnail },
             caption
         }, { quoted: mek });
 
+        // Send MP3 file
         await conn.sendMessage(from, {
             document: { url: res.downloadUrl },
             fileName: `${res.title}.mp3`,
-            mimetype: "audio/mpeg",
-            caption: res.title
+            mimetype: "audio/mpeg"
         }, { quoted: mek });
 
         await conn.sendMessage(from, { react: { text: '✅', key: mek.key } });
@@ -52,6 +52,6 @@ ${config.FOOTER || "𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 
     } catch (e) {
         console.error("Error in .song command:", e);
         await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
-        reply(`❌ Error: ${e.message}`);
+        await reply(`❌ Error: ${e.message}`);
     }
 });
