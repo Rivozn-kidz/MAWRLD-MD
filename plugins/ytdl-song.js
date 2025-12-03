@@ -5,7 +5,7 @@ const { lite } = require('../marwld');
 lite({
     pattern: "play",
     alias: ["s", "song"],
-    react: "🎵",
+    react: "🔮",
     desc: "Download MP3 from YouTube",
     category: "download",
     use: ".song <Text or YT URL>",
@@ -23,13 +23,16 @@ lite({
 
         const res = data.result;
 
-        const caption =
-            `🎵 *SONG DOWNLOADER*\n\n` +
-            `✨ *Title:* ${res.title}\n` +
-            `📀 *Quality:* ${res.quality}\n` +
-            `⏳ *Duration:* ${res.duration} sec\n` +
-            `🖇 *Video URL:* ${res.videoUrl}\n\n` +
-            `${config.FOOTER || "𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
+           const caption = 
+`╭─❍  *MAWRLD MD SONG DL*  ⬡────⭓
+├▢⬡ 
+├▢⬡ ✨ *Title:* ${title}
+├▢⬡ 📀 *Quality:* ${quality}
+├▢⬡ ⏳ *Duration:* ${duration} sec
+├▢⬡ 🖇 *Video URL:* ${videoUrl}
+├▢⬡ 
+╰─────────────────────━━╯
+${config.FOOTER || "𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
 
         // Send Thumbnail + caption
         await conn.sendMessage(from, {
