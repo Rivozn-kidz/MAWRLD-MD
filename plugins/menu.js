@@ -39,53 +39,53 @@ lite(
  ├─∘❏ owner 
  ╰─────────────────────❏
  
- *╭────⬡ AUDIO EDITOR MENU ⬡────*
-* ├─∘❏ .bass*
-* ├─∘❏ .slow* 
-* ├─∘❏ .fast*
-* ├─∘❏ .reverse*
-* ├─∘❏ .baby* 
-* ├─∘❏ .demon*
-* ├─∘❏ .earrape*  
-* ├─∘❏ .nightcore*
-* ├─∘❏ .robot* 
-* ├─∘❏ .chipmunk* 
-* ├─∘❏ .radio* 
-* ├─∘❏ .blown* 
-* ├─∘❏ .tupai*   
-* ├─∘❏ .fat* 
-* ├─∘❏ .smooth*
-* ├─∘❏ .deep*
- *╰─────────────────────❏*
+╭────⬡ *AUDIO EDITOR MENU* ⬡────
+├─∘❏ .bass
+├─∘❏ .slow 
+├─∘❏ .fast
+├─∘❏ .reverse
+├─∘❏ .baby
+├─∘❏ .demon
+├─∘❏ .earrape  
+├─∘❏ .nightcore
+├─∘❏ .robot
+├─∘❏ .chipmunk
+├─∘❏ .radio
+├─∘❏ .blown 
+├─∘❏ .tupai  
+├─∘❏ .fat
+├─∘❏ .smooth
+├─∘❏ .deep
+╰─────────────────────❏
 
- *╭────⬡ ANIME MENU ⬡────*
-* ├─∘❏ fack*
-* ├─∘❏ truth*
-* ├─∘❏ dare*
-* ├─∘❏ dog*
-* ├─∘❏ awoo*
-* ├─∘❏ garl*
-* ├─∘❏ waifu*
-* ├─∘❏ neko*
-* ├─∘❏ megnumin*
-* ├─∘❏ neko*
-* ├─∘❏ maid*
-* ├─∘❏ loli*
-* ├─∘❏ animegirl*
-* ├─∘❏ animegirl1*
-* ├─∘❏ animegirl2*
-* ├─∘❏ animegirl3*
-* ├─∘❏ animegirl4*
-* ├─∘❏ animegirl5*
-* ├─∘❏ anime1*
-* ├─∘❏ anime2*
-* ├─∘❏ anime3*
-* ├─∘❏ anime4*
-* ├─∘❏ anime5*
-* ├─∘❏ animenews*
-* ├─∘❏ foxgirl*
-* ├─∘❏ naruto*
- *╰─────────────────────❏*
+ ╭────⬡ *ANIME MENU* ⬡────
+ ├─∘❏ fack
+ ├─∘❏ truth
+ ├─∘❏ dare
+ ├─∘❏ dog
+ ├─∘❏ awoo
+ ├─∘❏ garl
+ ├─∘❏ waifu
+ ├─∘❏ neko
+ ├─∘❏ megnumin
+ ├─∘❏ neko
+ ├─∘❏ maid
+ ├─∘❏ loli
+ ├─∘❏ animegirl
+ ├─∘❏ animegirl1
+ ├─∘❏ animegirl2
+ ├─∘❏ animegirl3
+ ├─∘❏ animegirl4
+ ├─∘❏ animegirl5
+ ├─∘❏ anime1
+ ├─∘❏ anime2
+ ├─∘❏ anime3
+ ├─∘❏ anime4
+ ├─∘❏ anime5
+ ├─∘❏ animenews
+ ├─∘❏ foxgirl
+ ├─∘❏ naruto
+ ╰─────────────────────❏*
 
  ╭─『 *AI & CONVERTER MENU* 』 ──❏
  ├─∘❏ openai
