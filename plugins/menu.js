@@ -186,6 +186,8 @@ lite(
  ├─∘❏ setpp
  ├─∘❏ clearchats
  ├─∘❏ gjid
+ ├─∘❏ chid
+ ├─∘❏ tempmail
  ╰─────────────────────❏
  
  ╭─『 *TOOLS AND UTILITIES MENU* 』──❏
