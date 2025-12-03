@@ -2,7 +2,8 @@ const fs = require('fs');
 const config = require('../config');
 const { lite, commands } = require('../marwld');
 const axios = require('axios');
-
+const os = require("os")
+const {runtime} = require('../lib/functions')
 lite(
   {
     pattern: "menu",
@@ -18,14 +19,14 @@ lite(
 
       let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU* ⬡────⭓
+├▢⬡ 🤖 *Owner:* ${config.OWNER_NAME}
 ├▢⬡ 👤 *User:* ${pushname}
+├▢⬡ ⏱️ Runtime:* ${runtime(process.uptime())}
 ├▢⬡ 🌐 *Mode:* [${config.MODE}]
 ├▢⬡ ✨ *Prefix:* [${config.PREFIX}]
 ├▢⬡ 📦 *Total Commands:* ${commands.length}
 ├▢⬡ 📌 *Version:* ${config.VERSION} BETA
-├▢⬡ ☁️ *Platform:* Heroku
 ├▢⬡ 📡 *Baileys:* Multi Device
-├▢⬡ 🤖 *Owner:* ${config.OWNER_NAME}
 ╰─────────────────────━━╯
 
  ╭──『 *SYSTEM/CORE MENU* 』──❏
