@@ -257,23 +257,12 @@ lite(
             forwardedNewsletterMessageInfo: {
               newsletterJid: '120363404529319592@newsletter',
               newsletterName: 'Ridz Tech Inc',
-              serverMessageId: 143
+              serverMessageId: 3
             }
           }
         },
         { quoted: mek }
       );
-
-
-await conn.sendMessage(
-  from,
-  {
-    audio: (await axios.get("https://files.catbox.moe/s93vg8.mp3", { responseType: "arraybuffer" })).data,
-    mimetype: "audio/mp4",
-    ptt: true
-  },
-  { quoted: mek }
-);
 
     } catch (e) {
       console.error(e);
