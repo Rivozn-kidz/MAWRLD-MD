@@ -188,6 +188,9 @@ lite(
  ├─∘❏ gjid
  ├─∘❏ chid
  ├─∘❏ tempmail
+ ├─∘❏ checkmail
+ ├─∘❏ userinfo
+ ├─∘❏ ch
  ╰─────────────────────❏
  
  ╭─『 *TOOLS AND UTILITIES MENU* 』──❏
