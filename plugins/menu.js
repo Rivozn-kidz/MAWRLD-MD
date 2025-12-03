@@ -59,6 +59,57 @@ lite(
  ├─∘❏ emoji
  ╰─────────────────────❏
  
+╭──『 *LOGO MAKER MENU* 』──❏
+├─∘❏  neonlight
+├─∘❏  blackpink
+├─∘❏  dragonball
+├─∘❏  3dcomic
+├─∘❏  america
+├─∘❏  naruto
+├─∘❏  sadgirl
+├─∘❏  clouds
+├─∘❏  futuristic
+├─∘❏  3dpaper
+├─∘❏  eraser
+├─∘❏  sunset
+├─∘❏  leaf
+├─∘❏  galaxy
+├─∘❏  sans
+├─∘❏  boom
+├─∘❏  hacker
+├─∘❏  devilwings
+├─∘❏  nigeria
+├─∘❏  bulb
+├─∘❏  angelwings
+├─∘❏  zodiac
+├─∘❏  luxury
+├─∘❏  paint
+├─∘❏  frozen
+├─∘❏  castle
+├─∘❏  tatoo
+├─∘❏  valorant
+├─∘❏  bear
+├─∘❏  typography
+├─∘❏  birthday
+├─∘❏ Deadpool
+├─∘❏ cat
+├─∘❏ pornhub
+├─∘❏ thor
+╰─────────────────────❏
+
+ ╭──『 *IMG EDIT MENU* 』──❏
+ ├─∘❏ menu
+ ├─∘❏ adedit
+ ├─∘❏ greyedit
+ ├─∘❏ bluredit
+ ├─∘❏ invertedit
+ ├─∘❏ jailedit
+ ├─∘❏ joke
+ ├─∘❏ Nokia
+ ├─∘❏ removebg
+ ├─∘❏ wanted
+ ╰─────────────────────❏
+
  ╭─『 *SOCIAL MEDIA MENU* 』─❏
  ├─∘❏ facebook
  ├─∘❏ facebook2
