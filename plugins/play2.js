@@ -25,7 +25,7 @@ lite({
 ├▢⬡ 📌 *Title:* ${yts.title}
 ├▢⬡ ⏱ *Duration:* ${yts.timestamp}
 ├▢⬡ 👁 *Views:* ${yts.views}
-├▢⬡ ✍ *Author:* ${yts.author.name}
+├▢⬡ ✍ *Author:* ${yts.author?.name || "Unknown"}
 ├▢⬡ 
 ╰─────────────────────━━╯
 
@@ -35,7 +35,7 @@ lite({
 3. Voice Note (PTT)
 4. Document (MP4)
 5. Document (MP3)
-> *© 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳;'
+> *© 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳*`;
 
         // Send thumbnail + caption
         const sentMsg = await conn.sendMessage(from, { image: { url: yts.thumbnail }, caption: ytMsg }, { quoted: mek });
