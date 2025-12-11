@@ -8,7 +8,7 @@ lite({
     alias: ["status", "online", "a"],
     desc: "Check if bot is alive and running",
     category: "main",
-    react: "⚡",
+    react: "🔮",
     filename: __filename
 }, async (conn, mek, m, { from, sender, reply }) => {
     try {
@@ -25,10 +25,9 @@ lite({
 ┃ 🛠️ *Prefix:* [ ${config.PREFIX} ]
 ┃ ⚙️ *Mode:* [ ${config.MODE} ]
 ┃ 💾 *RAM:* ${heapUsed}MB / ${totalMem}MB
-┃ 🖥️ *Host:* ${os.hostname()}
 ┃ ⏱️ *Uptime:* ${uptime}
 ╰━━━━━━━━━━━━━━⬣
-📝 *${config.DESCRIPTION}*
+📝 > ${config.DESCRIPTION}
         `.trim();
 
         await conn.sendMessage(from, {
