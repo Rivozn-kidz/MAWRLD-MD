@@ -11,18 +11,19 @@ lite({
 async(conn, mek, m,{from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let about = `
-> *╭━━〔 RIDZ CODER INFO〕━━┈⊷*
-> *┃★*
-> *┃★* *Hello ${pushname} 👋, I am Ridz Coder.*
-> *┃★* I laugh at everyone who laughs at me.
-> *┃★* *I am the last thief*, but don't chase after me  
-> *┃★* *because I will change myself
-> *┃★* Ask them all and they will tell you:
-> *┃★* • If you stand *behind me*, I protect you.
-> *┃★* • If you stand *beside me*, I respect you. 
-> *┃★* • But if you stand *against me*, I show *no mercy*.
-> *┃★*
-> *╰━━━━━━━━━━━━━━━┈⊷*
+╭━━〔 ʀɪᴅᴢ ᴄᴏᴅᴇʀ ɪɴғᴏ〕━━┈⊷
+┃★
+┃★ •ʜᴇʟʟᴏ ${pushname} 👋, ɪ ᴀᴍ ʀɪᴅᴢ ᴄᴏᴅᴇʀ.
+┃★ •ɪ ʟᴀᴜɢʜ ᴀᴛ ᴇᴠᴇʀʏᴏɴᴇ ᴡʜᴏ ʟᴀᴜɢʜs ᴀᴛ ᴍᴇ.
+┃★ •ɪ ᴀᴍ ᴛʜᴇ ʟᴀsᴛ ᴛʜɪᴇғ, ʙᴜᴛ ᴅᴏɴ'ᴛ ᴄʜᴀsᴇ ᴀғᴛᴇʀ ᴍᴇ
+┃★ •ʙᴇᴄᴀᴜsᴇ ɪ ᴡɪʟʟ ᴄʜᴀɴɢᴇ ᴍʏsᴇʟғ
+┃★ •ᴀsᴋ ᴛʜᴇᴍ ᴀʟʟ ᴀɴᴅ ᴛʜᴇʏ ᴡɪʟʟ ᴛᴇʟʟ ʏᴏᴜ:
+┃★ •ɪғ ʏᴏᴜ sᴛᴀɴᴅ ʙᴇʜɪɴᴅ ᴍᴇ, ɪ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜ.
+┃★ •ɪғ ʏᴏᴜ sᴛᴀɴᴅ ʙᴇsɪᴅᴇ ᴍᴇ, ɪ ʀᴇsᴘᴇᴄᴛ ʏᴏᴜ.
+┃★ •ʙᴜᴛ ɪғ ʏᴏᴜ sᴛᴀɴᴅ ᴀɢᴀɪɴsᴛ ᴍᴇ, ɪ sʜᴏᴡ ɴᴏ ᴍᴇʀᴄʏ.
+┃★
+╰━━━━━━━━━━━━━━━┈⊷
+
 > *ᴀ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ᴅᴇᴠᴇʟᴘᴏʀ*
 
 *╭━━━〔 • MY TOP FRIENDS• 〕━━━┈⊷*
