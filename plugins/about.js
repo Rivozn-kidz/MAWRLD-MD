@@ -11,29 +11,24 @@ lite({
 async(conn, mek, m,{from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let about = `
-*╭━━〔 RIDZ CODER INFO〕━━┈⊷*
-
-*👋 HELLO ${pushname}*
-
-*╰──────────────┈⊷*
-*╭━━━〔  ABOUT  ME〕━━━┈⊷*
-*┃★╭──────────────*
-*┃★│* *Hello 👋, I am Ridz Coder.*
-*┃★│* I laugh at everyone who laughs at me.
-*┃★│* *I am the last thief*, but don't chase after me  
-*┃★│* *because I will change myself
-*┃★│* Ask them all and they will tell you:
-*┃★│* • If you stand *behind me*, I protect you.
-*┃★│* • If you stand *beside me*, I respect you. 
-*┃★│* • But if you stand *against me*, I show *no mercy*.
-*┃★╰──────────────*
-*╰━━━━━━━━━━━━━━━┈⊷*
+> *╭━━〔 RIDZ CODER INFO〕━━┈⊷*
+> *┃★*
+> *┃★* *Hello ${pushname} 👋, I am Ridz Coder.*
+> *┃★* I laugh at everyone who laughs at me.
+> *┃★* *I am the last thief*, but don't chase after me  
+> *┃★* *because I will change myself
+> *┃★* Ask them all and they will tell you:
+> *┃★* • If you stand *behind me*, I protect you.
+> *┃★* • If you stand *beside me*, I respect you. 
+> *┃★* • But if you stand *against me*, I show *no mercy*.
+> *┃★*
+> *╰━━━━━━━━━━━━━━━┈⊷*
 > *ᴀ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ᴅᴇᴠᴇʟᴘᴏʀ*
 
-*╭━━━〔 •SPECIAL THANKS FOR MY FRIENDS• 〕━━━┈⊷*
+*╭━━━〔 • MY TOP FRIENDS• 〕━━━┈⊷*
 *┃★╭──────────────*
 *┃★│* *▢KEVIN TECH*
-*┃★│* *▢RIVONZ CODER*
+*┃★│* *▢JINX*
 *┃★│* *▢TERRI DEV*
 *┃★│* *▢KING ORMAN*
 *┃★╰──────────────*
