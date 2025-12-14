@@ -29,7 +29,9 @@ lite(
 ╰─────────────────────━━╯
 
  ╭──『 *SYSTEM/CORE MENU* 』──❏
- ├─∘❏ menu
+ ├─∘❏ support 
+ ├─∘❏ ridzcoder
+ ├─∘❏ family 
  ├─∘❏ vv
  ├─∘❏ ping
  ├─∘❏ alive
@@ -146,7 +148,6 @@ lite(
 ╰─────────────────────❏
 
  ╭──『 *IMG EDIT MENU* 』──❏
- ├─∘❏ menu
  ├─∘❏ adedit
  ├─∘❏ greyedit
  ├─∘❏ bluredit
