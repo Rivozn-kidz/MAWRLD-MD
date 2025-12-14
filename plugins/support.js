@@ -31,15 +31,15 @@ let dec = `
 > MAWRLD MD 
 https://github.com/Ridz-coder01/MAWRLD-MD
 ⟣──────────────────⟢
-${readMore}
-\`CHANNEL🛠️\`
+> CHANNEL🛠️
 
 https://whatsapp.com/channel/0029VajohKp5a2498c8Dbl2Y
-\`GROUP\` 👥
+
+> GROUP 👥
 
 https://chat.whatsapp.com/JgaAxg3I2Oy35Gdbk3Zvv2
 
-\`Ridz Coder\` *Dev🧑‍💻*
+> Ridz Coder *Dev🧑‍💻*
 
 https://wa.me/+263714732501?text=MAWRLD-MD 
 
