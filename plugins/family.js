@@ -10,7 +10,7 @@ lite({
     const familyList = `
          
       *╭┈──[ • RIDZ TECH 𝖥𝖠𝖬𝖨𝖫𝖸 • ]───•*
-      *│  ◦* *▢➠
+      *│  ◦* *▢➠*
       *│  ◦* *▢➠ Kelvin tech*
       *│  ◦* *▢➠ Jinx*
       *│  ◦* *▢➠ Terri Dev*
@@ -19,7 +19,7 @@ lite({
       *│  ◦* *▢➠ And You*
       *╰┈───────────────•*
         *•────────────•⟢*
-        Family is not about blood,It's about the people who choose to be there for you, support you, and love you unconditionally, no matter what. They're the ones who show up, who listen, and who care 🤗
+      Family is not about blood,It's about the people who choose to be there for you, support you, and love you unconditionally, no matter what. They're the ones who show up, who listen, and who care 🤗
     `;
     try {
         await conn.sendMessage(m.chat, {
