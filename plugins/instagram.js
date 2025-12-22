@@ -4,7 +4,7 @@ const { lite } = require('../marwld');
 lite({
     pattern: "instagram",
     alias: ["insta", "ig"],
-    react: "🔮",
+    react: "🍂",
     desc: "Download Instagram videos/reels",
     category: "download",
     use: ".igdl <Instagram URL>",
@@ -51,7 +51,7 @@ lite({
 lite({
   pattern: "instagram4",
   alias: ["insta4", "ig4", "igvideo4"],
-  react: '🔮',
+  react: '🍂',
   desc: "Download videos from Instagram (Alternative API)",
   category: "download",
   use: ".igdl2 <Instagram URL>",
@@ -102,7 +102,7 @@ lite({
 lite({
   pattern: "instagram2",
   alias: ["ig2", "instadl2"],
-  react: '🔮',
+  react: '🍂',
   desc: "Download videos from Instagram (API v5)",
   category: "download",
   use: ".igdl5 <Instagram video URL>",
@@ -153,7 +153,7 @@ lite({
     alias: ["insta3"],
     desc: "Download Instagram video",
     category: "download",
-    react: "🔮",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply }) => {
