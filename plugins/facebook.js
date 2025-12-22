@@ -5,7 +5,7 @@ const { lite } = require("../marwld");
 lite({
   pattern: "facebook",
   alias: ["fbdl"],
-  react: '🔮',
+  react: '🍂',
   desc: "Download videos from Facebook (Basic API)",
   category: "download",
   use: ".fb <Facebook video URL>",
@@ -48,7 +48,7 @@ lite({
 lite({
   pattern: "facebook2",
   alias: ["fbdl2"],
-  react: '📥',
+  react: '🍂',
   desc: "Download videos from Facebook (API v4)",
   category: "download",
   use: ".fb4 <Facebook video URL>",
