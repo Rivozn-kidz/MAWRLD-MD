@@ -11,7 +11,7 @@ var cants = "I cant find this anime."
 lite({
     pattern: "garl",
     alias: ["imgloli"],
-    react: '😎',
+    react: '🍂',
     desc: "Download anime loli images.",
     category: "anime",
     use: '.loli',
@@ -21,7 +21,7 @@ async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, se
 try{
 
 let res = await axios.get('https://api.lolicon.app/setu/v2?num=1&r18=0&tag=lolicon')
-let wm = `😎 Random Garl image
+let wm = `🍂 Random Garl image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.data[0].urls.original }, caption: wm}, { quoted: mek })
@@ -35,7 +35,7 @@ console.log(e)
 lite({
     pattern: "waifu",
     alias: ["imgwaifu"],
-    react: '💫',
+    react: '🍂',
     desc: "Download anime waifu images.",
     category: "anime",
     use: '.waifu',
@@ -44,7 +44,7 @@ lite({
 async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let res = await axios.get('https://api.waifu.pics/sfw/waifu')
-let wm = `🩵 Random Waifu image
+let wm = `🍂 Random Waifu image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
@@ -58,7 +58,7 @@ console.log(e)
 lite({
     pattern: "neko",
     alias: ["imgneko"],
-    react: '💫',
+    react: '🍂',
     desc: "Download anime neko images.",
     category: "anime",
     use: '.neko',
@@ -67,7 +67,7 @@ lite({
 async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let res = await axios.get('https://api.waifu.pics/sfw/neko')
-let wm = `🩷 Random neko image
+let wm = `🍂 Random neko image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.url  }, caption: wm}, { quoted: mek })
@@ -76,12 +76,12 @@ reply(cants)
 console.log(e)
 }
 })
-  
+
 //=====================================================================
 lite({
     pattern: "megumin",
     alias: ["imgmegumin"],
-    react: '💕',
+    react: '🍂',
     desc: "Download anime megumin images.",
     category: "anime",
     use: '.megumin',
@@ -90,7 +90,7 @@ lite({
 async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let res = await axios.get('https://api.waifu.pics/sfw/megumin')
-let wm = `❤️‍🔥Random megumin image
+let wm = `🍂Random megumin image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
@@ -104,7 +104,7 @@ console.log(e)
 lite({
     pattern: "maid",
     alias: ["imgmaid"],
-    react: '💫',
+    react: '🍂',
     desc: "Download anime maid images.",
     category: "anime",
     use: '.maid',
@@ -113,7 +113,7 @@ lite({
 async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let res = await axios.get('https://api.waifu.im/search/?included_tags=maid')
-let wm = `😎 Random maid image
+let wm = `🍂 Random maid image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.images[0].url  }, caption: wm}, { quoted: mek })
@@ -127,7 +127,7 @@ console.log(e)
 lite({
     pattern: "awoo",
     alias: ["imgawoo"],
-    react: '😎',
+    react: '🍂',
     desc: "Download anime awoo images.",
     category: "anime",
     use: '.awoo',
@@ -136,7 +136,7 @@ lite({
 async(conn, mek, m,{from, l, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let res = await axios.get('https://api.waifu.pics/sfw/awoo')
-let wm = `😎 Random awoo image
+let wm = `🍂 Random awoo image
 
 ©Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
@@ -150,7 +150,7 @@ lite({
     pattern: "animegirl",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -170,7 +170,7 @@ lite({
     pattern: "animegirl1",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -190,7 +190,7 @@ lite({
     pattern: "animegirl2",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -210,7 +210,7 @@ lite({
     pattern: "animegirl3",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -230,7 +230,7 @@ lite({
     pattern: "animegirl4",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -250,7 +250,7 @@ lite({
     pattern: "animegirl5",
     desc: "Fetch a random anime girl image.",
     category: "fun",
-    react: "🧚🏻",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -273,14 +273,14 @@ lite({
     pattern: "anime",
     desc: "anime the bot",
     category: "main",
-    react: "⛱️",
+    react: "🍂",
     filename: __filename
 },
 
 async(conn, mek, m,{from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let dec = `> KHAN-MD ANIME IMGS*`
+let dec = `> MAWRLD-MD ANIME IMGS*`
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/b26f27aa5daaada031b90.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/51b44e4b086667361061b.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/7d165d73f914985542537.jpg`},caption:dec},{quoted:mek});
@@ -299,7 +299,7 @@ reply(`${e}`)
 lite({
     pattern: "anime1",
     desc: "Animal image.",
-    react: "🧚‍♀️",
+    react: "🍂",
     category: "other",
     filename: __filename
 },
@@ -325,7 +325,7 @@ reply(`${e}`)
 lite({
     pattern: "anime2",
     desc: "Animal image.",
-    react: "🧚‍♀️",
+    react: "🍂",
     category: "other",
     filename: __filename
 },
@@ -352,7 +352,7 @@ reply(`${e}`)
 lite({
     pattern: "anime3",
     desc: "Animal image.",
-    react: "🧚‍♀️",
+    react: "🍂",
     category: "other",
     filename: __filename
 },
@@ -379,7 +379,7 @@ reply(`${e}`)
 lite({
     pattern: "anime4",
     desc: "Animal image.",
-    react: "🧚‍♀️",
+    react: "🍂",
     category: "other",
     filename: __filename
 },
@@ -406,7 +406,7 @@ reply(`${e}`)
 lite({
     pattern: "anime5",
     desc: "Animal image.",
-    react: "🧚‍♀️",
+    react: "🍂",
     category: "other",
     filename: __filename
 },
@@ -433,7 +433,7 @@ lite({
     pattern: "dog",
     desc: "Fetch a random dog image.",
     category: "fun",
-    react: "🐶",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -444,7 +444,7 @@ async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, se
 
         await conn.sendMessage(from, { image: { url: data.message }, caption: '> *© Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ ' }, { quoted: mek });
     } catch (e) {
-        console.log(e); // ❯❯ Powered by KHAN-MD 👑
+        console.log(e); 
         reply(`єяяσя ƒєт¢нιηg ∂σg ιмαgє: ${e.message}`);
     }
 });
