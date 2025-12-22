@@ -5,7 +5,7 @@ lite({
     pattern: 'deep',
     desc: 'Make audio sound deeper',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -15,7 +15,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -25,7 +25,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -39,7 +39,7 @@ lite({
     pattern: 'smooth',
     desc: 'Smooth out audio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -49,7 +49,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -59,7 +59,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -73,7 +73,7 @@ lite({
     pattern: 'deep',
     desc: 'Make audio sound deeper',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -83,7 +83,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -93,7 +93,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -107,7 +107,7 @@ lite({
     pattern: 'fat',
     desc: 'Make audio sound fat/bassy',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -117,7 +117,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -127,7 +127,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -141,7 +141,7 @@ lite({
     pattern: 'tupai',
     desc: 'Special tupai effect',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -151,7 +151,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -161,7 +161,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -175,7 +175,7 @@ lite({
     pattern: 'blown',
     desc: 'Make audio sound blown out',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -185,7 +185,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -195,7 +195,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -210,7 +210,7 @@ lite({
     pattern: 'radio',
     desc: 'Make audio sound like old radio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -220,7 +220,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -230,7 +230,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -244,7 +244,7 @@ lite({
     pattern: 'robot',
     desc: 'Make audio sound robotic',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -254,7 +254,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -264,7 +264,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -278,7 +278,7 @@ lite({
     pattern: 'chipmunk',
     desc: 'Make audio sound high-pitched',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -288,7 +288,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -298,7 +298,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -313,7 +313,7 @@ lite({
     pattern: 'nightcore',
     desc: 'Apply nightcore effect',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -323,7 +323,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -333,7 +333,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -347,7 +347,7 @@ lite({
     pattern: 'earrape',
     desc: 'Max volume (use with caution)',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -357,7 +357,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -367,7 +367,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -382,7 +382,7 @@ lite({
     pattern: 'bass',
     desc: 'Add heavy bass boost to audio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -392,7 +392,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -402,7 +402,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -416,7 +416,7 @@ lite({
     pattern: 'reverse',
     desc: 'Reverse audio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -426,7 +426,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -436,7 +436,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -450,7 +450,7 @@ lite({
     pattern: 'slow',
     desc: 'Slow down audio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -460,7 +460,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -470,7 +470,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -484,7 +484,7 @@ lite({
     pattern: 'fast',
     desc: 'Speed up audio',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -494,7 +494,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -504,7 +504,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -518,7 +518,7 @@ lite({
     pattern: 'baby',
     desc: 'Make audio sound like a baby',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -528,7 +528,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -538,7 +538,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
@@ -552,7 +552,7 @@ lite({
     pattern: 'demon',
     desc: 'Make audio sound demonic',
     category: 'audio',
-    react: '🔮',
+    react: '🍂',
     filename: __filename
 }, async (client, match, message, { from }) => {
     if (!message.quoted || !['audioMessage', 'videoMessage'].includes(message.quoted.mtype)) {
@@ -562,7 +562,7 @@ lite({
     }
 
     await client.sendMessage(from, { react: { text: '⏳', key: message.key } });
-    
+
     try {
         const buffer = await message.quoted.download();
         const ext = message.quoted.mtype === 'videoMessage' ? 'mp4' : 'mp3';
@@ -572,7 +572,7 @@ lite({
             audio: audio,
             mimetype: 'audio/mpeg'
         }, { quoted: message });
-        await client.sendMessage(from, { react: { text: '✅', key: message.key } });
+        await client.sendMessage(from, { react: { text: '🏔️', key: message.key } });
     } catch (e) {
         console.error('Error:', e);
         await client.sendMessage(from, {
