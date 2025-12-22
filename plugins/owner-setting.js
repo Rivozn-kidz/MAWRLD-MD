@@ -7,7 +7,7 @@ lite({
     pattern: "shutdown",
     desc: "Shutdown the bot.",
     category: "owner",
-    react: "🛑",
+    react: "🏔️",
     filename: __filename
 },
 async (conn, mek, m, { from, isOwner, reply }) => {
@@ -19,7 +19,7 @@ lite({
     pattern: "broadcast",
     desc: "Broadcast a message to all groups.",
     category: "owner",
-    react: "📢",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, isOwner, args, reply }) => {
@@ -37,7 +37,7 @@ lite({
     pattern: "setpp",
     desc: "Set bot profile picture.",
     category: "owner",
-    react: "🖼️",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
@@ -57,7 +57,7 @@ lite({
     pattern: "clearchats",
     desc: "Clear all chats from the bot.",
     category: "owner",
-    react: "🧹",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, isOwner, reply }) => {
@@ -78,7 +78,7 @@ lite({
     pattern: "gjid",
     desc: "Get the list of JIDs for all groups the bot is part of.",
     category: "owner",
-    react: "📝",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, isOwner, reply }) => {
@@ -93,7 +93,7 @@ async (conn, mek, m, { from, isOwner, reply }) => {
 
 lite({
 pattern: "delete",
-react: "❌",
+react: "🍂",
 alias: ["del"],
 desc: "delete message",
 category: "group",
