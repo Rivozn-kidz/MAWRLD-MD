@@ -5,7 +5,7 @@ lite({
   pattern: 'gitclone',
   alias: ["git"],
   desc: "Download GitHub repository as a zip file.",
-  react: '📦',
+  react: '🍂',
   category: "download",
   filename: __filename
 }, async (conn, m, store, {
