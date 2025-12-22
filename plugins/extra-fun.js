@@ -6,7 +6,7 @@ lite({
   alias: ["friend", "fcheck"],
   desc: "Calculate the compatibility score between two users.",
   category: "fun",
-  react: "💖",
+  react: "🍂",
   filename: __filename,
   use: "@tag1 @tag2",
 }, async (conn, mek, m, { args, reply }) => {
@@ -45,7 +45,7 @@ lite({
   pattern: "aura",
   desc: "Calculate aura score of a user.",
   category: "fun",
-  react: "💀",
+  react: "🍂",
   filename: __filename,
   use: "@tag",
 }, async (conn, mek, m, { args, reply }) => {
@@ -82,7 +82,7 @@ lite({
     pattern: "roast",
     desc: "Roast someone ",
     category: "fun",
-    react: "🔥",
+    react: "🍂",
     filename: __filename,
     use: "@tag"
 }, async (conn, mek, m, { q, reply }) => {
@@ -156,8 +156,8 @@ lite({
     "Every time you speak, it feels like a system crash is near!",
     "You have an idea, but it's still ‘under review’!"
 ];
-   
-        
+
+
     let randomRoast = roasts[Math.floor(Math.random() * roasts.length)];
     let sender = `@${mek.sender.split("@")[0]}`;
     let mentionedUser = m.mentionedJid[0] || (mek.quoted && mek.quoted.sender);
@@ -167,7 +167,7 @@ lite({
     }
 
     let target = `@${mentionedUser.split("@")[0]}`;
-    
+
     // Sending the roast message with the mentioned user
     let message = `${target} :\n *${randomRoast}*\n> This is all for fun, don't take it seriously!`;
     await conn.sendMessage(mek.chat, { text: message, mentions: [mek.sender, mentionedUser] }, { quoted: mek });
@@ -177,20 +177,20 @@ lite({
     pattern: "8ball",
     desc: "Magic 8-Ball gives answers",
     category: "fun",
-    react: "🎱",
+    react: "🍂",
     filename: __filename
 }, 
 async (conn, mek, m, { from, q, reply }) => {
     if (!q) return reply("Ask a yes/no question! Example: .8ball Will I be rich?");
-    
+
     let responses = [
         "Yes!", "No.", "Maybe...", "Definitely!", "Not sure.", 
         "Ask again later.", "I don't think so.", "Absolutely!", 
         "No way!", "Looks promising!"
     ];
-    
+
     let answer = responses[Math.floor(Math.random() * responses.length)];
-    
+
     reply(`🎱 *Magic 8-Ball says:* ${answer}`);
 });
 
@@ -198,7 +198,7 @@ lite({
     pattern: "compliment",
     desc: "Give a nice compliment",
     category: "fun",
-    react: "😊",
+    react: "🍂",
     filename: __filename,
     use: "@tag (optional)"
 }, async (conn, mek, m, { reply }) => {
@@ -241,7 +241,7 @@ lite({
     pattern: "lovetest",
     desc: "Check love compatibility between two users",
     category: "fun",
-    react: "❤️",
+    react: "🍂",
     filename: __filename,
     use: "@tag1 @tag2"
 }, async (conn, mek, m, { args, reply }) => {
@@ -273,7 +273,7 @@ lite(
         pattern: "emoji",
         desc: "Convert text into emoji form.",
         category: "fun",
-        react: "🙂",
+        react: "🍂",
         filename: __filename,
         use: "<text>"
     },
@@ -281,7 +281,7 @@ lite(
         try {
             // Join the words together in case the user enters multiple words
             let text = args.join(" ");
-            
+
             // Map text to corresponding emoji characters
             let emojiMapping = {
                 "a": "🅰️",
