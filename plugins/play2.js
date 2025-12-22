@@ -5,7 +5,7 @@ const ytsearch = require('yt-search');
 lite({
     pattern: "play2",
     alias: ["playx"],
-    react: "🔮",
+    react: "🍂",
     desc: "Download YouTube content with options",
     category: "download",
     use: ".play3 <Youtube URL or Name>",
@@ -34,7 +34,7 @@ lite({
 3. Voice Note (PTT)
 4. Document (MP4)
 5. Document (MP3)
-> *© 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳*`;
+> *© 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳* 🍂`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: yts.thumbnail }, caption: ytMsg }, { quoted: mek });
         const messageID = sentMsg.key.id;
