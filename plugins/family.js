@@ -4,7 +4,7 @@ lite({
     pattern: "family",
     desc: "Casey Family",
     category: "fun",
-    react: "👨‍👩‍👧‍👦",
+    react: "🍂",
     filename: __filename
 }, async (conn, mek, m, { reply }) => {
     const familyList = `
@@ -17,9 +17,8 @@ lite({
       *│  ◦* *▢➠ Rivozn Coder*
       *│  ◦* *▢➠ Kinna Tech*
       *│  ◦* *▢➠ And You*
-      *╰┈───────────────•*
-        *•────────────•⟢*
-      Family is not about blood,It's about the people who choose to be there for you, support you, and love you unconditionally, no matter what. They're the ones who show up, who listen, and who care 🤗
+      *╰┈───────────────•⟢*
+Family is not about blood,It's about the people who choose to be there for you, support you, and love you unconditionally, no matter what. They're the ones who show up, who listen, and who care 🤗
     `;
     try {
         await conn.sendMessage(m.chat, {
