@@ -17,7 +17,7 @@ function formatBytes(bytes) {
 lite({
   pattern: "ad",
   alias: ["adedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".ad [reply to image]",
@@ -27,7 +27,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -35,7 +35,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -87,7 +87,7 @@ lite({
 lite({
   pattern: "grey",
   alias: ["greyedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".grey [reply to image]",
@@ -97,7 +97,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -105,7 +105,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -157,7 +157,7 @@ lite({
 lite({
   pattern: "blur",
   alias: ["bluredit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".blur [reply to image]",
@@ -167,7 +167,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -175,7 +175,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -227,7 +227,7 @@ lite({
 lite({
   pattern: "invert",
   alias: ["invertedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".invert [reply to image]",
@@ -237,7 +237,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -245,7 +245,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -297,7 +297,7 @@ lite({
 lite({
   pattern: "jail",
   alias: ["jailedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".jail [reply to image]",
@@ -307,7 +307,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -315,7 +315,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -367,7 +367,7 @@ lite({
 lite({
   pattern: "imgjoke",
   alias: ["jokedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".imgjoke [reply to image]",
@@ -377,7 +377,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -385,7 +385,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -437,7 +437,7 @@ lite({
 lite({
   pattern: "nokia",
   alias: ["nokiaedit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".nokia [reply to image]",
@@ -447,7 +447,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -455,7 +455,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -507,7 +507,7 @@ lite({
 lite({
   pattern: "rmbg",
   alias: ["removebg"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".rmbg [reply to image]",
@@ -517,7 +517,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -525,7 +525,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
@@ -578,7 +578,7 @@ lite({
 lite({
   pattern: "wanted",
   alias: ["wantededit"],
-  react: '🔮',
+  react: '🍂',
   desc: "Scan and remove bg from images",
   category: "img_edit",
   use: ".wanted [reply to image]",
@@ -588,7 +588,7 @@ lite({
     // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    
+
     if (!mimeType || !mimeType.startsWith('image/')) {
       return reply("Please reply to an image file (JPEG/PNG)");
     }
@@ -596,7 +596,7 @@ lite({
     // Download the media
     const mediaBuffer = await quotedMsg.download();
     const fileSize = formatBytes(mediaBuffer.length);
-    
+
     // Get file extension based on mime type
     let extension = '';
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
