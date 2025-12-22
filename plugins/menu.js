@@ -7,7 +7,7 @@ const {runtime} = require('../lib/functions')
 lite(
   {
     pattern: "menu",
-    react: "🔮",
+    react: "🍂",
     alias: ["allmenu"],
     desc: "Get command list",
     category: "main",
@@ -19,7 +19,7 @@ lite(
 
       let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU* ⬡────⭓
-├▢⬡ 🤖 *Owner:* ${config.OWNER_NAME}
+├▢⬡ 🇺🇬 *Owner:* ${config.OWNER_NAME}
 ├▢⬡ 👤 *User:* ${pushname}
 ├▢⬡ ⏱️ *Runtime:* ${runtime(process.uptime())}
 ├▢⬡ 🌐 *Mode:* [${config.MODE}]
@@ -28,7 +28,7 @@ lite(
 ├▢⬡ 📌 *Version:* ${config.VERSION} BETA
 ╰─────────────────────━━╯
 
- ╭──『 *SYSTEM/CORE MENU* 』──❏
+ ╭──『🏔️ *SYSTEM/CORE MENU* 🏔️』──❏
  ├─∘❏ support 
  ├─∘❏ ridzcoder
  ├─∘❏ family 
@@ -40,7 +40,7 @@ lite(
  ├─∘❏ owner 
  ╰─────────────────────❏
  
-╭────⬡ *AUDIO EDITOR MENU* ⬡────
+╭────⬡🍂 *AUDIO EDITOR MENU* 🍂⬡────
 ├─∘❏ .bass
 ├─∘❏ .slow 
 ├─∘❏ .fast
@@ -59,7 +59,7 @@ lite(
 ├─∘❏ .deep
 ╰─────────────────────❏
 
- ╭────⬡ *ANIME MENU* ⬡────
+ ╭────⬡🏔️ *ANIME MENU*🏔️ ⬡────
  ├─∘❏ fack
  ├─∘❏ truth
  ├─∘❏ dare
@@ -88,7 +88,7 @@ lite(
  ├─∘❏ naruto
  ╰─────────────────────❏*
 
- ╭─『 *AI & CONVERTER MENU* 』 ──❏
+ ╭─『🏔️ *AI & CONVERTER MENU* 🏔️』 ──❏
  ├─∘❏ openai
  ├─∘❏ deepseek
  ├─∘❏ ai
@@ -98,7 +98,7 @@ lite(
  ├─∘❏ tts
  ╰─────────────────────❏
  
- ╭─『 *FUN & PERSONALITY MENU* 』─❏
+ ╭─『🍂 *FUN & PERSONALITY MENU* 🍂』─❏
  ├─∘❏ 8ball
  ├─∘❏ compliment
  ├─∘❏ lovetest
@@ -109,7 +109,7 @@ lite(
  ├─∘❏ emoji
  ╰─────────────────────❏
  
-╭──『 *LOGO MAKER MENU* 』──❏
+╭──『🏔️ *LOGO MAKER MENU* 🏔️』──❏
 ├─∘❏  neonlight
 ├─∘❏  blackpink
 ├─∘❏  dragonball
@@ -147,7 +147,7 @@ lite(
 ├─∘❏ thor
 ╰─────────────────────❏
 
- ╭──『 *IMG EDIT MENU* 』──❏
+ ╭──『🍂 *IMG EDIT MENU* 🍂』──❏
  ├─∘❏ adedit
  ├─∘❏ greyedit
  ├─∘❏ bluredit
@@ -159,7 +159,7 @@ lite(
  ├─∘❏ wanted
  ╰─────────────────────❏
 
- ╭─『 *SOCIAL MEDIA MENU* 』─❏
+ ╭─『🏔️ *SOCIAL MEDIA MENU* 🏔️』─❏
  ├─∘❏ facebook
  ├─∘❏ facebook2
  ├─∘❏ instagram 
@@ -178,7 +178,7 @@ lite(
  ├─∘❏ video 
  ╰─────────────────────❏
 
- ╭─『 *OWNER MENU* 』───❏
+ ╭─『🍂 *OWNER MENU* 🍂』───❏
  ├─∘❏ delete
  ├─∘❏ vcf
  ├─∘❏ antidelete
@@ -194,7 +194,7 @@ lite(
  ├─∘❏ ch
  ╰─────────────────────❏
  
- ╭─『 *TOOLS AND UTILITIES MENU* 』──❏
+ ╭─『🏔️ *TOOLS AND UTILITIES MENU* 🏔️』──❏
  ├─∘❏ cringe 
  ├─∘❏ poke 
  ├─∘❏ dance 
@@ -224,7 +224,7 @@ lite(
  ╰─────────────────────❏
 
  
- ╭──『 *GROUP MANAGEMENT* 』──❏
+ ╭──『🍂 *GROUP MANAGEMENT* 🍂』──❏
  ├─∘❏ unlockgc 
  ├─∘❏ unmute 
  ├─∘❏ tagall 
@@ -257,7 +257,7 @@ lite(
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
               newsletterJid: '120363404529319592@newsletter',
-              newsletterName: 'Ridz Tech Inc',
+              newsletterName: 'Airbyte Synergetic Labs 🍂',
               serverMessageId: 3
             }
           }
