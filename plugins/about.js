@@ -3,7 +3,7 @@ const {lite , commands} = require('../marwld')
 lite({
     pattern: "ridzcoder",
     alias: ["coder","ridz"], 
-    react: "👑",
+    react: "🍂",
     desc: "get owner dec",
     category: "main",
     filename: __filename
@@ -36,7 +36,7 @@ let about = `
 *╰━━━━━━━━━━━━━━━┈⊷*
 
 *•────────────•⟢*
-> © 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳
+> © 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳🍂
 *•────────────•⟢*
 `
 
@@ -47,7 +47,7 @@ await conn.sendMessage(from,{image:{url:`https://files.catbox.moe/qwpimr.png`},c
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363404529319592@newsletter',
-      newsletterName: 'RIDZ TECH INC',
+      newsletterName: 'Airbyte Synergetic Labs 🍂',
       serverMessageId: 999
     }
   }
