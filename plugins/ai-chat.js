@@ -6,7 +6,7 @@ lite({
     alias: ["bot", "dj", "gpt", "gpt4", "bing"],
     desc: "Chat with an AI model",
     category: "ai",
-    react: "🤖",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
@@ -22,7 +22,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
         }
 
         await reply(`🤖 *AI Response:*\n\n${data.message}`);
-        await react("✅");
+        await react("🏔️");
     } catch (e) {
         console.error("Error in AI command:", e);
         await react("❌");
@@ -35,7 +35,7 @@ lite({
     alias: ["chatgpt", "gpt3", "open-gpt"],
     desc: "Chat with OpenAI",
     category: "ai",
-    react: "🧠",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
@@ -51,7 +51,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
         }
 
         await reply(`🧠 *OpenAI Response:*\n\n${data.result}`);
-        await react("✅");
+        await react("🏔️");
     } catch (e) {
         console.error("Error in OpenAI command:", e);
         await react("❌");
@@ -64,7 +64,7 @@ lite({
     alias: ["deep", "seekai"],
     desc: "Chat with DeepSeek AI",
     category: "ai",
-    react: "🧠",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
@@ -80,7 +80,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
         }
 
         await reply(`🧠 *DeepAI Response:*\n\n${data.result}`);
-        await react("✅");
+        await react("🏔️");
     } catch (e) {
         console.error("Error in DeepAI command:", e);
         await react("❌");
