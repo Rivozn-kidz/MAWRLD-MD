@@ -6,7 +6,7 @@ lite({
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
     category: "main",
-    react: "⚡",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, sender, reply }) => {
@@ -42,7 +42,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363404529319592@newsletter',
-                    newsletterName: "Ridz tech inc",
+                    newsletterName: "Airbyte Synergetic Labs 🍂",
                     serverMessageId: 143
                 }
             }
