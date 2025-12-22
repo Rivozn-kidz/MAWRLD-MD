@@ -13,7 +13,7 @@ const { getBuffer, fetchJson } = require('../lib/functions');
 
 lite({
     pattern: "person",
-    react: "👤",
+    react: "🍂",
     alias: ["userinfo", "profile"],
     desc: "Get complete user profile information",
     category: "utility",
@@ -133,7 +133,7 @@ ${isGroup ? `👥 *Group Role:* ${groupRole}` : ''}
 lite({
     pattern: "ch",
     alias: ["chreact"],
-    react: "🔮",
+    react: "🍂",
     desc: "React to channel messages with stylized text",
     category: "owner",
     use: '.chr <channel-link> <text>',
@@ -166,7 +166,7 @@ async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, se
         await conn.newsletterReactMessage(channelMeta.id, messageId, emoji);
 
         return reply(`
-╭━━━〔 *MAWRLD MD* 🔮〕━━━┈⊷
+╭━━━〔 *MAWRLD MD* 🍂〕━━━┈⊷
 ┃▸ *Success!* Reaction sent
 ┃▸ *Channel:* ${channelMeta.name}
 ┃▸ *Reaction:* ${emoji}
@@ -182,7 +182,7 @@ async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, se
 lite({
   pattern: "cid",
   alias: ["newsletter", "id", "channelid"],
-  react: "⏳",
+  react: "🍂",
   desc: "Get WhatsApp Channel info from link",
   category: "whatsapp",
   filename: __filename
@@ -236,7 +236,7 @@ lite({
   desc: "Generate a Read More message with hidden text",
   category: "utility",
   use: ".readmore <your text>",
-  react: "📝",
+  react: "🍂",
   filename: __filename
 }, async (conn, mek, m, { from, reply, args }) => {
   try {
@@ -261,7 +261,7 @@ lite({
     alias: ["genmail"],
     desc: "Generate a new temporary email address",
     category: "utility",
-    react: "📧",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, reply, prefix }) => {
@@ -330,7 +330,7 @@ lite({
     alias: ["inbox", "tmail", "mailinbox"],
     desc: "Check your temporary email inbox",
     category: "utility",
-    react: "📬",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, reply, args }) => {
