@@ -3,7 +3,7 @@ const { lite } = require("../marwld");
 lite({
   pattern: "vv",
   alias: ["viewonce", 'retrive'],
-  react: '🐳',
+  react: '🍂',
   desc: "Owner Only - retrieve quoted message back to user",
   category: "owner",
   filename: __filename
