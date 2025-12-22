@@ -6,7 +6,7 @@ lite({
     pattern: "githubstalk",
     desc: "Fetch detailed GitHub user profile including profile picture.",
     category: "utility",
-    react: "🔮",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, islite, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
