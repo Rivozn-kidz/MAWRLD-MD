@@ -6,7 +6,7 @@ lite({
     alias: ["channelstalk", "chinfo"],
     desc: "Get WhatsApp channel information",
     category: "utility",
-    react: "🔍",
+    react: "🍂",
     filename: __filename
 },
 async (conn, mek, m, { from, reply, args }) => {
@@ -34,7 +34,7 @@ async (conn, mek, m, { from, reply, args }) => {
 ┃◈┃• *📝 Description*: ${data.description.replace(/\n/g, '\n┃◈┃• ')}
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> © 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳`;
+> © 𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳🍂`;
 
         // Send message with channel image
         await conn.sendMessage(from, {
