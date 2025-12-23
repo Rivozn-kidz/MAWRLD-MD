@@ -8,25 +8,20 @@ const getRandomImage = () => {
     try {
         const srcPath = path.join(__dirname, '../src');
         const files = fs.readdirSync(srcPath);
-        const images = files.filter(f =>
-            f.endsWith('.jpg') || f.endsWith('.png') || f.endsWith('.jpeg')
-        );
-        if (!images.length) return 'https://files.catbox.moe/y3j3kl.jpg';
-        return path.join(srcPath, images[Math.floor(Math.random() * images.length)]);
+        const images = files.filter(f => /\.(jpe?g|png)$/i.test(f));
+        return images.length ? path.join(srcPath, images[Math.floor(Math.random() * images.length)]) : 'https://files.catbox.moe/y3j3kl.jpg';
     } catch {
         return 'https://files.catbox.moe/mn9fgn.jpg';
     }
 };
 
-lite ({
-    pattern: "menu2",
-    desc: "menu the bot",
+lite({
+    pattern: "veronica",
+    desc: "bot menu",
     category: "menu",
     react: "🐇",
     filename: __filename
-}, async (conn, mek, m, {
-    from, pushname, reply
-}) => {
+}, async (conn, mek, m, { from, pushname, reply }) => {
     try {
         const totalCommands = Object.keys(commands).length;
         const time = runtime(process.uptime());
@@ -37,63 +32,28 @@ lite ({
         }, ${pushname}!* 🌟
 
 ╭━《 *𝐕𝐄𝐑𝐎𝐍𝐈𝐂𝐀 𝐀𝐈* 》━┈⊷
-┃❍ User : ${pushname}
-┃❍ Commands : ${totalCommands}
-┃❍ Platform : Heroku
-┃❍ Developer : terri
-┃❍ Mode : ${config.MODE}
-┃❍ Prefix : ${config.PREFIX}
-┃❍ Runtime : ${time}
-┃❍ Version : 1.0.0
+┃▸ User : ${pushname}
+┃▸ Commands : ${totalCommands}
+┃▸ Platform : Heroku
+┃▸ Developer : terri
+┃▸ Mode : ${config.MODE}
+┃▸ Prefix : ${config.PREFIX}
+┃▸ Runtime : ${time}
+┃▸ Version : 1.0.0
 ╰━━━━━━━━━━━━━━━┈⊷
 
 ≡ select a category below:`;
 
-
         const verifiedContact = {
-            key: {
-                fromMe: false,
-                participant: "0@s.whatsapp.net",
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "𝐕𝐄𝐑𝐎𝐍𝐈𝐂𝐀 𝐀𝐈",
-                    vcard:
-                        "BEGIN:VCARD\n" +
-                        "VERSION:3.0\n" +
-                        "FN: VERONICA AI\n" +
-                        "ORG:Terri Bot;\n" +
-                        "TEL;type=CELL;type=VOICE;waid=256784670936:+256784670936\n" +
-                        "END:VCARD"
-                }
-            }
+            key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "status@broadcast" },
+            message: { contactMessage: { displayName: "VERONICA AI", vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:VERONICA AI\nORG:Terri Bot;\nTEL;type=CELL;type=VOICE;waid=256784670936:+256784670936\nEND:VCARD" } }
         };
 
-        // IMAGE MESSAGE
-        await conn.sendMessage(
-            from,
-            {
-                image: { url: getRandomImage() },
-                caption: caption,
-                contextInfo: {
-                    forwardingScore: 5,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363397100406773@newsletter',
-                        newsletterName: "𝗩𝗘𝗥𝗢𝗡𝗜𝗖𝗔 𝗔𝗜",
-                        serverMessageId: 143
-                    }
-                }
-            },
-            { quoted: verifiedContact }
-        );
-
-        // LIST MENU
+        // IMAGE + LIST MENU
         await conn.sendMessage(from, {
-            text: caption,
+            image: { url: getRandomImage() },
+            caption,
             footer: "POWERED BY VERONICA AI",
-            title: "📂 SELECT A CATEGORY",
             buttonText: "OPEN MENU",
             sections: [
                 {
@@ -106,7 +66,7 @@ lite ({
                 {
                     title: "👑 OWNER",
                     rows: [
-                        { title: "👤 Owner", description: "Owner information", rowId: `${config.PREFIX}owner` },
+                        { title: "👤 Owner", description: "Owner info", rowId: `${config.PREFIX}owner` },
                         { title: "⚙️ Settings", description: "Bot settings", rowId: `${config.PREFIX}settings` }
                     ]
                 },
@@ -117,15 +77,19 @@ lite ({
                         { title: "🎵 Audio", description: "Audio tools", rowId: `${config.PREFIX}audio` }
                     ]
                 }
-            ]
+            ],
+            contextInfo: {
+                forwardingScore: 5,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363397100406773@newsletter',
+                    newsletterName: "VERONICA AI",
+                    serverMessageId: 143
+                }
+            }
         }, { quoted: verifiedContact });
 
-        // AUDIO PTT
-        await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/i9g2jx.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: true
-        }, { quoted: verifiedContact });
+   
 
     } catch (e) {
         console.log(e);
