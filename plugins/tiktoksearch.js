@@ -5,7 +5,7 @@ lite({
   pattern: "tiktoksearch",
   alias: ["tiktoks", "tiks"],
   desc: "Search for TikTok videos using a query.",
-  react: '🔮',
+  react: '🏔️',
   category: 'utility',
   filename: __filename
 }, async (conn, m, store, {
@@ -14,14 +14,14 @@ lite({
   reply
 }) => {
   if (!args[0]) {
-    return reply("🌸 What do you want to search on TikTok?\n\n*Usage Example:*\n.tiktoksearch <query>");
+    return reply("🏔️ What do you want to search on TikTok?\n\n*Usage Example:*\n.tiktoksearch <query>");
   }
 
   const query = args.join(" ");
   await store.react('⌛');
 
   try {
-    reply(`🔎 Searching TikTok for: *${query}*`);
+    reply(`🏔️ Searching TikTok for: *${query}*`);
 
     const response = await fetch(`https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=${encodeURIComponent(query)}`);
     const data = await response.json();
@@ -35,7 +35,7 @@ lite({
     const results = data.data.slice(0, 7).sort(() => Math.random() - 0.5);
 
     for (const video of results) {
-      const message = `🌸 *TikTok Video Result*:\n\n`
+      const message = `🏔️ *TikTok Video Result*:\n\n`
         + `*• Title*: ${video.title}\n`
         + `*• Author*: ${video.author || 'Unknown'}\n`
         + `*• Duration*: ${video.duration || "Unknown"}\n`
@@ -51,7 +51,7 @@ lite({
       }
     }
 
-    await store.react('✅');
+    await store.react('🏔️');
   } catch (error) {
     console.error("Error in TikTokSearch command:", error);
     await store.react('❌');
