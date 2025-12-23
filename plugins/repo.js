@@ -8,7 +8,7 @@ lite({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch information about this GitHub repository.",
-    react: "📂",
+    react: "🏔️",
     category: "main",
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
@@ -24,14 +24,14 @@ lite({
 
         const caption = `
 ╭━━〔 🔎 *Repository Info* 〕━━⬣
-┃ 📦 *Bot Name:* ${data.name}
-┃ 👑 *Owner:* ${data.owner.login}
-┃ ⭐ *Stars:* ${data.stargazers_count}
-┃ 🍴 *Forks:* ${data.forks_count}
-┃ 🔗 *Link:* ${data.html_url}
-┃ 📝 *Description:* ${data.description || 'No description'}
+┃ 🏔️ *Bot Name:* ${data.name}
+┃ 🏔️ *Owner:* ${data.owner.login}
+┃ 🏔️ *Stars:* ${data.stargazers_count}
+┃ 🏔️ *Forks:* ${data.forks_count}
+┃ 🏔️ *Link:* ${data.html_url}
+┃ 🏔️ *Description:* ${data.description || 'No description'}
 ╰━━━━━━━━━━━━━━━━━━━━⬣
-✨ *Don't forget to ★ and fork!*
+🏔️ *Don't forget to ★ and fork!*
 🔧 ${config.DESCRIPTION}
         `.trim();
 
@@ -41,7 +41,7 @@ lite({
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363404529319592@newsletter',
-                newsletterName: 'RIDZ TECH INC',
+                newsletterName: 'Airbyte Synergetic Labs 🏔️',
                 serverMessageId: 143
             }
         };
