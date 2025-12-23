@@ -1,5 +1,5 @@
 const config = require('../config');
-const { lite, commands } = marwld;
+const { lite, commands } = require('../marwld');
 const os = require("os");
 const { runtime } = require('../lib/functions');
 const fs = require('fs');
