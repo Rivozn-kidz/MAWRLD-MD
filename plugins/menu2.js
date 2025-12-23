@@ -1,6 +1,5 @@
 const config = require('../config');
 const { lite, commands } = require('../marwld');
-const os = require("os");
 const { runtime } = require('../lib/functions');
 const fs = require('fs');
 const path = require('path');
@@ -9,30 +8,24 @@ const getRandomImage = () => {
     try {
         const srcPath = path.join(__dirname, '../src');
         const files = fs.readdirSync(srcPath);
-        const imageFiles = files.filter(file =>
-            file.endsWith('.jpg') || file.endsWith('.png') || file.endsWith('.jpeg')
+        const imgs = files.filter(f =>
+            f.endsWith('.jpg') || f.endsWith('.png') || f.endsWith('.jpeg')
         );
 
-        if (!imageFiles.length) {
-            return 'https://files.catbox.moe/y3j3kl.jpg';
-        }
-
-        const randomImage = imageFiles[Math.floor(Math.random() * imageFiles.length)];
-        return path.join(srcPath, randomImage);
-    } catch (e) {
+        if (!imgs.length) return 'https://files.catbox.moe/y3j3kl.jpg';
+        return path.join(srcPath, imgs[Math.floor(Math.random() * imgs.length)]);
+    } catch {
         return 'https://files.catbox.moe/mn9fgn.jpg';
     }
 };
 
 lite({
-    pattern: "menu2",
-    desc: "menu the bot",
+    pattern: "veronica",
+    desc: "bot menu",
     category: "menu",
     react: "🐇",
     filename: __filename
-}, async (conn, mek, m, {
-    from, pushname, reply
-}) => {
+}, async (conn, mek, m, { from, pushname, reply }) => {
     try {
         const totalCommands = Object.keys(commands).length;
         const time = runtime(process.uptime());
@@ -43,20 +36,20 @@ lite({
         }, ${pushname}!* 🌟
 
 ╭━《 *𝐕𝐄𝐑𝐎𝐍𝐈𝐂𝐀 𝐀𝐈* 》━┈⊷
-┃▸  User : ${config.OWNER_NAME}
-┃▸  Commands : ${totalCommands}
-┃▸  Platform : Heroku
-┃▸  Developer : terri
-┃▸  Mode : ${config.MODE}
-┃▸  Prefix : ${config.PREFIX}
-┃▸  Runtime : ${time}
-┃▸  Version : 1.0.0
+┃▸ User : ${config.OWNER_NAME}
+┃▸ Commands : ${totalCommands}
+┃▸ Platform : Heroku
+┃▸ Developer : terri
+┃▸ Mode : ${config.MODE}
+┃▸ Prefix : ${config.PREFIX}
+┃▸ Runtime : ${time}
+┃▸ Version : 1.0.0
 ╰━━━━━━━━━━━━━━━┈⊷`;
 
         const verifiedContact = {
             key: {
                 fromMe: false,
-                participant: `0@s.whatsapp.net`,
+                participant: "0@s.whatsapp.net",
                 remoteJid: "status@broadcast"
             },
             message: {
@@ -79,31 +72,24 @@ lite({
                 image: { url: getRandomImage() },
                 caption: dec,
                 footer: "𝗩𝗘𝗥𝗢𝗡𝗜𝗖𝗔 𝗔𝗜",
-                nativeFlowMessage: {
-                    buttons: [
-                        {
-                            name: "quick_reply",
-                            buttonParamsJson: JSON.stringify({
-                                display_text: "📜 Menu",
-                                id: `${config.PREFIX}menu`
-                            })
-                        },
-                        {
-                            name: "quick_reply",
-                            buttonParamsJson: JSON.stringify({
-                                display_text: "⚡ Ping",
-                                id: `${config.PREFIX}ping`
-                            })
-                        },
-                        {
-                            name: "quick_reply",
-                            buttonParamsJson: JSON.stringify({
-                                display_text: "👤 Owner",
-                                id: `${config.PREFIX}owner`
-                            })
-                        }
-                    ]
-                },
+                buttons: [
+                    {
+                        buttonId: `${config.PREFIX}menu`,
+                        buttonText: { displayText: "📜 Menu" },
+                        type: 1
+                    },
+                    {
+                        buttonId: `${config.PREFIX}ping`,
+                        buttonText: { displayText: "⚡ Ping" },
+                        type: 1
+                    },
+                    {
+                        buttonId: `${config.PREFIX}owner`,
+                        buttonText: { displayText: "👤 Owner" },
+                        type: 1
+                    }
+                ],
+                headerType: 4,
                 contextInfo: {
                     forwardingScore: 5,
                     isForwarded: true,
