@@ -5,7 +5,7 @@ const { lite } = require('../marwld');
 lite({
     pattern: "ytvideo",
     alias: ["ytv", "video"],
-    react: "📹",
+    react: "🏔️",
     desc: "Download YouTube Video using PrivateZia API",
     category: "download",
     use: ".ytvideo <Text or YouTube URL>",
@@ -24,11 +24,11 @@ lite({
         const res = data.result;
 
         const caption =
-            `📹 *YOUTUBE VIDEO DOWNLOADER*\n\n` +
-            `🎬 *Title:* ${res.title}\n` +
-            `📀 *Quality:* ${res.quality}\n` +
-            `⏳ *Duration:* ${res.duration} sec\n` +
-            `🖇 *Video URL:* ${res.videoUrl}\n\n` +
+            `🏔️ *YOUTUBE VIDEO DOWNLOADER*\n\n` +
+            `🏔️ *Title:* ${res.title}\n` +
+            `🏔️ *Quality:* ${res.quality}\n` +
+            `🏔️ *Duration:* ${res.duration} sec\n` +
+            `🏔️ *Video URL:* ${res.videoUrl}\n\n` +
             `${config.FOOTER || "𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙳"}`;
 
         // Send Thumbnail Preview
