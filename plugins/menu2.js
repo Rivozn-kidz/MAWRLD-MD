@@ -1,5 +1,5 @@
 const config = require('../config');
-const { cmd, commands } = require('../command');
+const { lite, commands } = marwld;
 const os = require("os");
 const { runtime } = require('../lib/functions');
 const fs = require('fs');
@@ -24,7 +24,7 @@ const getRandomImage = () => {
     }
 };
 
-cmd({
+lite({
     pattern: "menu2",
     desc: "menu the bot",
     category: "menu",
