@@ -7,13 +7,13 @@ lite({
     alias: ['sticker2img', 'stoimg', 'stickertoimage', 's2i'],
     desc: 'Convert stickers to images',
     category: 'convert',
-    react: '🖼️',
+    react: '🏔️',
     filename: __filename
 }, async (client, match, message, { from }) => {
     // Input validation
     if (!message.quoted) {
         return await client.sendMessage(from, {
-            text: "✨ *Sticker Converter*\n\nPlease reply to a sticker message\n\nExample: `.convert` (reply to sticker)"
+            text: "🏔️ *Sticker Converter*\n\nPlease reply to a sticker message\n\nExample: `.convert` (reply to sticker)"
         }, { quoted: message });
     }
 
@@ -51,7 +51,7 @@ lite({
     pattern: 'tomp3',
     desc: 'Convert media to audio',
     category: 'convert',
-    react: '🎵',
+    react: '🏔️',
     filename: __filename
 }, async (client, match, message, { from }) => {
     // Input validation
@@ -69,7 +69,7 @@ lite({
 
     if (match.quoted.seconds > 300) {
         return await client.sendMessage(from, {
-            text: "⏱️ Media too long (max 5 minutes)"
+            text: "🏔️ Media too long (max 5 minutes)"
         }, { quoted: message });
     }
 
@@ -101,7 +101,7 @@ lite({
     pattern: 'toptt',
     desc: 'Convert media to voice message',
     category: 'convert',
-    react: '🎙️',
+    react: '🏔️',
     filename: __filename
 }, async (client, match, message, { from }) => {
     // Input validation
