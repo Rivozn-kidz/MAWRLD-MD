@@ -20,7 +20,7 @@ const getRandomImage = () => {
 };
 
 lite({
-    pattern: "veronica",
+    pattern: "menu2",
     desc: "bot menu",
     category: "menu",
     react: "🐇",
