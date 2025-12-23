@@ -2,36 +2,41 @@ const fs = require('fs');
 const config = require('../config');
 const { lite, commands } = require('../marwld');
 const axios = require('axios');
-const os = require("os")
-const {runtime} = require('../lib/functions')
+const os = require("os");
+const { runtime } = require('../lib/functions');
+
 lite(
   {
     pattern: "menu",
-    react: "🍂",
+    react: "🏔️",
     alias: ["allmenu"],
     desc: "Get command list",
     category: "main",
     filename: __filename
   },
 
-  async (conn, mek, m, { from, quoted, pushname, reply }) => {
+  async (conn, mek, m, { from, pushname, reply }) => {
     try {
-
       let madeMenu = `
 ╭─❍ *${config.BOT_NAME} MENU* ⬡────⭓
 ├▢⬡ 🇺🇬 *Owner:* ${config.OWNER_NAME}
-├▢⬡ 👤 *User:* ${pushname}
-├▢⬡ ⏱️ *Runtime:* ${runtime(process.uptime())}
-├▢⬡ 🌐 *Mode:* [${config.MODE}]
-├▢⬡ ✨ *Prefix:* [${config.PREFIX}]
-├▢⬡ 📦 *Total Commands:* ${commands.length}
-├▢⬡ 📌 *Version:* ${config.VERSION} BETA
+├▢⬡ 🏔️ *User:* ${pushname}
+├▢⬡ 🏔️ *Runtime:* ${runtime(process.uptime())}
+├▢⬡ 🏔️ *Mode:* [${config.MODE}]
+├▢⬡ 🏔️ *Prefix:* [${config.PREFIX}]
+├▢⬡ 🏔️ *Total Commands:* ${commands.length}
+├▢⬡ 🏔️ *Version:* ${config.VERSION} BETA
 ╰─────────────────────━━╯
 
- ╭──『🏔️ *SYSTEM/CORE MENU* 🏔️』──❏
+> merry Christmas 🎉 ${pushname}
+
+
+
+
+ ╭『🏔️ *SYSTEM/CORE MENU* 🏔️』─❏
  ├─∘❏ support 
  ├─∘❏ ridzcoder
- ├─∘❏ family 
+ ├∘❏ family 
  ├─∘❏ vv
  ├─∘❏ ping
  ├─∘❏ alive
@@ -40,7 +45,7 @@ lite(
  ├─∘❏ owner 
  ╰─────────────────────❏
  
-╭────⬡🍂 *AUDIO EDITOR MENU* 🍂⬡────
+╭─⬡🏔️ *AUDIO EDITOR MENU* 🏔️⬡─
 ├─∘❏ .bass
 ├─∘❏ .slow 
 ├─∘❏ .fast
@@ -59,7 +64,7 @@ lite(
 ├─∘❏ .deep
 ╰─────────────────────❏
 
- ╭────⬡🏔️ *ANIME MENU*🏔️ ⬡────
+ ╭─⬡🏔️ *ANIME MENU*🏔️ ⬡──
  ├─∘❏ fack
  ├─∘❏ truth
  ├─∘❏ dare
@@ -88,7 +93,7 @@ lite(
  ├─∘❏ naruto
  ╰─────────────────────❏*
 
- ╭─『🏔️ *AI & CONVERTER MENU* 🏔️』 ──❏
+ ╭─『🏔️ *AI & CONVERTER * 🏔️』─❏
  ├─∘❏ openai
  ├─∘❏ deepseek
  ├─∘❏ ai
@@ -98,7 +103,7 @@ lite(
  ├─∘❏ tts
  ╰─────────────────────❏
  
- ╭─『🍂 *FUN & PERSONALITY MENU* 🍂』─❏
+ ╭─『🏔️ *FUN & PERSONALITY* 🏔️』─❏
  ├─∘❏ 8ball
  ├─∘❏ compliment
  ├─∘❏ lovetest
@@ -109,7 +114,7 @@ lite(
  ├─∘❏ emoji
  ╰─────────────────────❏
  
-╭──『🏔️ *LOGO MAKER MENU* 🏔️』──❏
+╭──『🏔️ *LOGO MAKER * 🏔️』──❏
 ├─∘❏  neonlight
 ├─∘❏  blackpink
 ├─∘❏  dragonball
@@ -147,7 +152,7 @@ lite(
 ├─∘❏ thor
 ╰─────────────────────❏
 
- ╭──『🍂 *IMG EDIT MENU* 🍂』──❏
+ ╭──『🏔️ *IMG EDIT* 🏔️』──❏
  ├─∘❏ adedit
  ├─∘❏ greyedit
  ├─∘❏ bluredit
@@ -159,7 +164,7 @@ lite(
  ├─∘❏ wanted
  ╰─────────────────────❏
 
- ╭─『🏔️ *SOCIAL MEDIA MENU* 🏔️』─❏
+ ╭─『🏔️ *SOCIAL MEDIA* 🏔️』─❏
  ├─∘❏ facebook
  ├─∘❏ facebook2
  ├─∘❏ instagram 
@@ -178,7 +183,7 @@ lite(
  ├─∘❏ video 
  ╰─────────────────────❏
 
- ╭─『🍂 *OWNER MENU* 🍂』───❏
+ ╭─『🏔️ *OWNER MENU* 🏔️』───❏
  ├─∘❏ delete
  ├─∘❏ vcf
  ├─∘❏ antidelete
@@ -194,7 +199,7 @@ lite(
  ├─∘❏ ch
  ╰─────────────────────❏
  
- ╭─『🏔️ *TOOLS AND UTILITIES MENU* 🏔️』──❏
+ ╭─『🏔️ *TOOLS & UTILITIES* 🏔️』──❏
  ├─∘❏ cringe 
  ├─∘❏ poke 
  ├─∘❏ dance 
@@ -224,7 +229,7 @@ lite(
  ╰─────────────────────❏
 
  
- ╭──『🍂 *GROUP MANAGEMENT* 🍂』──❏
+ ╭──『🏔️ *GROUP MENU* 🏔️』──❏
  ├─∘❏ unlockgc 
  ├─∘❏ unmute 
  ├─∘❏ tagall 
@@ -246,6 +251,22 @@ lite(
 > ${config.DESCRIPTION}
 `;
 
+      // Verified contact message
+      const verifiedContact = {
+        key: {
+          fromMe: false,
+          participant: "0@s.whatsapp.net",
+          remoteJid: "status@broadcast"
+        },
+        message: {
+          contactMessage: {
+            displayName: config.BOT_NAME,
+            vcard:
+              `BEGIN:VCARD\nVERSION:3.0\nFN:${config.BOT_NAME}\nORG:${config.OWNER_NAME};\nTEL;type=CELL;type=VOICE;waid=${config.OWNER_NUMBER}:${config.OWNER_NUMBER}\nEND:VCARD`
+          }
+        }
+      };
+
       await conn.sendMessage(
         from,
         {
@@ -262,7 +283,7 @@ lite(
             }
           }
         },
-        { quoted: mek }
+        { quoted: verifiedContact }
       );
 
     } catch (e) {
