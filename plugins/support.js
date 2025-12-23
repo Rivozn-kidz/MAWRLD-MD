@@ -11,7 +11,7 @@ lite({
     alias : "version",
     desc: " allmenu",
     category: "allmenu",
-    react: "🫅",
+    react: "🏔️",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -58,7 +58,7 @@ await conn.sendMessage(
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363404529319592@newsletter',
-                        newsletterName: '🔮』 Ridz Tech✧˚₊‧ Inc『🔮',
+                        newsletterName: '🏔️』 Airbyte Synergetic✧˚₊‧ Labs『🏔️',
                         serverMessageId: 143
                     }
                 }
