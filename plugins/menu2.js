@@ -76,7 +76,7 @@ lite({
         await conn.sendMessage(
             from,
             {
-                audio: { url: 'https://files.catbox.moe/holiday-jingle.mp3' }, // your Christmas jingle
+                audio: { url: 'https://files.catbox.moe/27t3h4.mp3' }, // your Christmas jingle
                 mimetype: 'audio/mp4',
                 ptt: true
             },
