@@ -6,7 +6,7 @@ lite({
     alias: ["ttdl", "tt", "tiktokdl"],
     desc: "Download TikTok video without watermark",
     category: "download",
-    react: "🔮",
+    react: "🏔️",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply }) => {
@@ -46,7 +46,7 @@ lite({
     alias: ["ttdl2", "ttv2"],
     desc: "Download TikTok video without watermark",
     category: "download",
-    react: "🔮",
+    react: "🏔️",
     filename: __filename
 }, async (conn, mek, m, { from, reply, args, q }) => {
     try {
@@ -69,7 +69,7 @@ lite({
         // Send video with minimal caption
         await conn.sendMessage(from, {
             video: { url: data.BK9.video.noWatermark },
-            caption: `- *Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ 💜*`
+            caption: `- *Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ 🏔️*`
         }, { quoted: mek });
 
         // Success reaction
@@ -85,7 +85,7 @@ lite({
 lite({
   pattern: "tiktok3",
   alias: ["ttdl3"],
-  react: "🔮",
+  react: "🏔️",
   desc: "Download TikTok video (API v4)",
   category: "download",
   use: ".tt4 <TikTok URL>",
@@ -97,7 +97,7 @@ lite({
       return reply("❌ Please provide a valid TikTok video URL.\n\nExample:\n.tt4 https://vt.tiktok.com/...");
     }
 
-    await conn.sendMessage(from, { react: { text: "⏳", key: m.key } });
+    await conn.sendMessage(from, { react: { text: "🏔️", key: m.key } });
 
     const apiUrl = `https://jawad-tech.vercel.app/download/tiktok?url=${encodeURIComponent(url)}`;
     const { data } = await axios.get(apiUrl);
@@ -113,10 +113,10 @@ lite({
 
     await conn.sendMessage(from, {
       video: { url: video },
-      caption: `🎬 *TikTok Downloader*\n👤 *Author:* ${author}\n💬 *Caption:* ${caption}\n\n> Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ 💜`
+      caption: `🎬 *TikTok Downloader*\n👤 *Author:* ${author}\n💬 *Caption:* ${caption}\n\n> Cʀᴇᴀᴛᴇᴅ ʙʏ Rɪᴅᴢ Cᴏᴅᴇʀ 🏔️`
     }, { quoted: mek });
 
-    await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
+    await conn.sendMessage(from, { react: { text: "🏔️", key: m.key } });
 
   } catch (err) {
     console.error("TT4 Error:", err);
