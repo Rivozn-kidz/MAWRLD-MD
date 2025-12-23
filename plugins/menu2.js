@@ -1,98 +1,90 @@
+const fs = require('fs');
+const path = require('path');
 const config = require('../config');
 const { lite, commands } = require('../marwld');
 const { runtime } = require('../lib/functions');
-const fs = require('fs');
-const path = require('path');
 
-const getRandomImage = () => {
+const getRandomChristmasImage = () => {
     try {
-        const srcPath = path.join(__dirname, '../src');
+        const srcPath = path.join(__dirname, '../src/christmas'); // put Christmas images here
         const files = fs.readdirSync(srcPath);
         const images = files.filter(f => /\.(jpe?g|png)$/i.test(f));
-        return images.length ? path.join(srcPath, images[Math.floor(Math.random() * images.length)]) : 'https://files.catbox.moe/y3j3kl.jpg';
+        return images.length ? path.join(srcPath, images[Math.floor(Math.random() * images.length)]) : 'https://files.catbox.moe/qwpimr.png';
     } catch {
-        return 'https://files.catbox.moe/mn9fgn.jpg';
+        return 'https://files.catbox.moe/qwpimr.png';
     }
 };
 
 lite({
-    pattern: "veronica",
-    desc: "bot menu",
-    category: "menu",
-    react: "🐇",
+    pattern: "christmas",
+    react: "🎄",
+    desc: "Christmas greetings menu",
+    category: "fun",
     filename: __filename
 }, async (conn, mek, m, { from, pushname, reply }) => {
     try {
-        const totalCommands = Object.keys(commands).length;
         const time = runtime(process.uptime());
 
-        const caption = `🌟 *Good ${
-            new Date().getHours() < 12 ? 'Morning' :
-            new Date().getHours() < 18 ? 'Afternoon' : 'Evening'
-        }, ${pushname}!* 🌟
+        const caption = `🎄 *Merry Christmas, ${pushname}!*
+🌟 May your holidays be filled with joy and love! 🌟
 
-╭━《 *𝐕𝐄𝐑𝐎𝐍𝐈𝐂𝐀 𝐀𝐈* 》━┈⊷
-┃▸ User : ${pushname}
-┃▸ Commands : ${totalCommands}
-┃▸ Platform : Heroku
-┃▸ Developer : terri
-┃▸ Mode : ${config.MODE}
-┃▸ Prefix : ${config.PREFIX}
-┃▸ Runtime : ${time}
-┃▸ Version : 1.0.0
-╰━━━━━━━━━━━━━━━┈⊷
+╭─❍ *${config.BOT_NAME} Christmas Menu* ⬡────⭓
+├▢⬡ Owner: ${config.OWNER_NAME}
+├▢⬡ User: ${pushname}
+├▢⬡ Runtime: ${time}
+├▢⬡ Mode: ${config.MODE}
+├▢⬡ Prefix: ${config.PREFIX}
+├▢⬡ Version: ${config.VERSION}
+╰─────────────────────━━╯
+`;
 
-≡ select a category below:`;
-
+        // Verified contact
         const verifiedContact = {
-            key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "status@broadcast" },
-            message: { contactMessage: { displayName: "VERONICA AI", vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:VERONICA AI\nORG:Terri Bot;\nTEL;type=CELL;type=VOICE;waid=256784670936:+256784670936\nEND:VCARD" } }
-        };
-
-        // IMAGE + LIST MENU
-        await conn.sendMessage(from, {
-            image: { url: getRandomImage() },
-            caption,
-            footer: "POWERED BY VERONICA AI",
-            buttonText: "OPEN MENU",
-            sections: [
-                {
-                    title: "📁 MAIN",
-                    rows: [
-                        { title: "📜 Menu", description: "View all commands", rowId: `${config.PREFIX}menu` },
-                        { title: "⚡ Ping", description: "Bot speed", rowId: `${config.PREFIX}ping` }
-                    ]
-                },
-                {
-                    title: "👑 OWNER",
-                    rows: [
-                        { title: "👤 Owner", description: "Owner info", rowId: `${config.PREFIX}owner` },
-                        { title: "⚙️ Settings", description: "Bot settings", rowId: `${config.PREFIX}settings` }
-                    ]
-                },
-                {
-                    title: "🧩 TOOLS",
-                    rows: [
-                        { title: "🖼️ Sticker", description: "Create stickers", rowId: `${config.PREFIX}sticker` },
-                        { title: "🎵 Audio", description: "Audio tools", rowId: `${config.PREFIX}audio` }
-                    ]
-                }
-            ],
-            contextInfo: {
-                forwardingScore: 5,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363397100406773@newsletter',
-                    newsletterName: "VERONICA AI",
-                    serverMessageId: 143
+            key: {
+                fromMe: false,
+                participant: "0@s.whatsapp.net",
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: config.BOT_NAME,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${config.BOT_NAME}\nORG:${config.OWNER_NAME};\nTEL;type=CELL;type=VOICE;waid=${config.OWNER_NUMBER}:${config.OWNER_NUMBER}\nEND:VCARD`
                 }
             }
-        }, { quoted: verifiedContact });
+        };
 
-   
+        await conn.sendMessage(
+            from,
+            {
+                image: { url: getRandomChristmasImage() },
+                caption,
+                contextInfo: {
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    mentionedJid: [m.sender],
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363404529319592@newsletter',
+                        newsletterName: 'Holiday Greetings 🎅',
+                        serverMessageId: 1
+                    }
+                }
+            },
+            { quoted: verifiedContact }
+        );
+
+        // Optional festive audio
+        await conn.sendMessage(
+            from,
+            {
+                audio: { url: 'https://files.catbox.moe/holiday-jingle.mp3' }, // your Christmas jingle
+                mimetype: 'audio/mp4',
+                ptt: true
+            },
+            { quoted: verifiedContact }
+        );
 
     } catch (e) {
-        console.log(e);
+        console.error(e);
         reply(String(e));
     }
 });
