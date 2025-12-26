@@ -272,7 +272,9 @@ const isReact = !!m.message?.reactionMessage
                                         }
                                         return;
                                 }
-    if (isCreator && mek.text.startsWith('$')) {
+  const text = mek.text || '';
+
+if (isCreator && text.startsWith('%')) {
                                         let code = budy.slice(2);
                                         if (!code) {
                                                 reply(
