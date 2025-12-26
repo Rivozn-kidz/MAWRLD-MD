@@ -254,7 +254,9 @@ const isReact = !!m.message?.reactionMessage
                                         .map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
                                         .includes(mek.sender);
 
-    if (isCreator && mek.text.startsWith('%')) {
+    const text = mek.text || '';
+
+if (isCreator && text.startsWith('%')) {
                                         let code = budy.slice(2);
                                         if (!code) {
                                                 reply(
@@ -272,9 +274,8 @@ const isReact = !!m.message?.reactionMessage
                                         }
                                         return;
                                 }
-  const text = mek.text || '';
-
-if (isCreator && text.startsWith('%')) {
+ 
+if (isCreator && text.startsWith('$')) {
                                         let code = budy.slice(2);
                                         if (!code) {
                                                 reply(
